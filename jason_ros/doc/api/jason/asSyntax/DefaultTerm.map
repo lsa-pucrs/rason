@@ -1,0 +1,18 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./Term.html" title="jason.asSyntax.Term" alt="" coords="372,131,455,173"/>
+<area shape="rect" id="node1" href="./Term.html" title="&lt;TABLE&gt;" alt="" coords="361,126,465,178"/>
+<area shape="rect" id="node7_1" href="./DefaultTerm.html" title="jason.asSyntax.DefaultTerm" alt="" coords="367,241,459,266"/>
+<area shape="rect" id="node7" href="./DefaultTerm.html" title="&lt;TABLE&gt;" alt="" coords="357,229,470,277"/>
+<area shape="rect" id="node2_2" href="./StringTermImpl.html" title="jason.asSyntax.StringTermImpl" alt="" coords="432,353,533,378"/>
+<area shape="rect" id="node2" href="./StringTermImpl.html" title="&lt;TABLE&gt;" alt="" coords="421,341,544,389"/>
+<area shape="rect" id="node3_3" href="./SourceInfo.html" title="jason.asSyntax.SourceInfo" alt="" coords="579,353,659,378"/>
+<area shape="rect" id="node3" href="./SourceInfo.html" title="&lt;TABLE&gt;" alt="" coords="568,341,669,389"/>
+<area shape="rect" id="node4_4" href="./ObjectTermImpl.html" title="jason.asSyntax.ObjectTermImpl" alt="" coords="16,353,125,378"/>
+<area shape="rect" id="node4" href="./ObjectTermImpl.html" title="&lt;TABLE&gt;" alt="" coords="5,341,136,389"/>
+<area shape="rect" id="node5_5" href="./NumberTermImpl.html" title="jason.asSyntax.NumberTermImpl" alt="" coords="171,353,285,378"/>
+<area shape="rect" id="node5" href="./NumberTermImpl.html" title="&lt;TABLE&gt;" alt="" coords="160,341,296,389"/>
+<area shape="rect" id="node6_6" href="./Literal.html" title="jason.asSyntax.Literal" alt="" coords="331,353,387,378"/>
+<area shape="rect" id="node6" href="./Literal.html" title="&lt;TABLE&gt;" alt="" coords="320,341,397,389"/>
+<area shape="rect" id="node8_7" href="http://java.sun.com/j2se/1.4.2/docs/api/java/io/Serializable.html" title="java.io.Serializable" alt="" coords="460,11,545,69"/>
+<area shape="rect" id="node8" href="http://java.sun.com/j2se/1.4.2/docs/api/java/io/Serializable.html" title="&lt;TABLE&gt;" alt="" coords="449,6,556,74"/>
+</map>

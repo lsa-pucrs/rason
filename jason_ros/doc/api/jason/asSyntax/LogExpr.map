@@ -1,0 +1,10 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./LogicalFormula.html" title="jason.asSyntax.LogicalFormula" alt="" coords="16,11,120,53"/>
+<area shape="rect" id="node1" href="./LogicalFormula.html" title="&lt;TABLE&gt;" alt="" coords="5,6,131,58"/>
+<area shape="rect" id="node2_1" href="./LogExpr.html" title="jason.asSyntax.LogExpr" alt="" coords="109,121,179,146"/>
+<area shape="rect" id="node2" href="./LogExpr.html" title="&lt;TABLE&gt;" alt="" coords="99,109,189,157"/>
+<area shape="rect" id="node3_2" href="./LogExpr.LogicalOp.html" title="jason.asSyntax.LogExpr.LogicalOp" alt="" coords="91,227,197,341"/>
+<area shape="rect" id="node3" href="./LogExpr.LogicalOp.html" title="&lt;TABLE&gt;" alt="" coords="81,222,207,346"/>
+<area shape="rect" id="node4_3" href="./BinaryStructure.html" title="jason.asSyntax.BinaryStructure" alt="" coords="166,19,277,45"/>
+<area shape="rect" id="node4" href="./BinaryStructure.html" title="&lt;TABLE&gt;" alt="" coords="155,8,287,56"/>
+</map>

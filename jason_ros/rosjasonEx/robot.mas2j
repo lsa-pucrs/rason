@@ -1,0 +1,8 @@
+MAS robot {
+
+    infrastructure: Centralised
+
+    agents: 
+
+         robot agentArchClass org.ros.jason.RosAgArch #5; 
+}		

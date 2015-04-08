@@ -1,0 +1,20 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./SMC.html" title="jason.asSyntax.patterns.goal.SMC" alt="" coords="16,17,67,42"/>
+<area shape="rect" id="node1" href="./SMC.html" title="&lt;TABLE&gt;" alt="" coords="5,5,77,53"/>
+<area shape="rect" id="node2_1" href="./SGA.html" title="jason.asSyntax.patterns.goal.SGA" alt="" coords="113,17,162,42"/>
+<area shape="rect" id="node2" href="./SGA.html" title="&lt;TABLE&gt;" alt="" coords="101,5,173,53"/>
+<area shape="rect" id="node3_2" href="./RC.html" title="jason.asSyntax.patterns.goal.RC" alt="" coords="213,17,254,42"/>
+<area shape="rect" id="node3" href="./RC.html" title="&lt;TABLE&gt;" alt="" coords="197,5,269,53"/>
+<area shape="rect" id="node4_3" href="./OMC.html" title="jason.asSyntax.patterns.goal.OMC" alt="" coords="304,17,357,42"/>
+<area shape="rect" id="node4" href="./OMC.html" title="&lt;TABLE&gt;" alt="" coords="293,5,368,53"/>
+<area shape="rect" id="node5_4" href="./MG.html" title="jason.asSyntax.patterns.goal.MG" alt="" coords="407,17,449,42"/>
+<area shape="rect" id="node5" href="./MG.html" title="&lt;TABLE&gt;" alt="" coords="392,5,464,53"/>
+<area shape="rect" id="node6_5" href="./EBDG.html" title="jason.asSyntax.patterns.goal.EBDG" alt="" coords="499,17,559,42"/>
+<area shape="rect" id="node6" href="./EBDG.html" title="&lt;TABLE&gt;" alt="" coords="489,5,570,53"/>
+<area shape="rect" id="node7_6" href="./DG.html" title="jason.asSyntax.patterns.goal.DG" alt="" coords="610,17,651,42"/>
+<area shape="rect" id="node7" href="./DG.html" title="&lt;TABLE&gt;" alt="" coords="595,5,667,53"/>
+<area shape="rect" id="node8_7" href="./BDG.html" title="jason.asSyntax.patterns.goal.BDG" alt="" coords="605,113,656,138"/>
+<area shape="rect" id="node8" href="./BDG.html" title="&lt;TABLE&gt;" alt="" coords="595,101,667,149"/>
+<area shape="rect" id="node9_8" href="./BC.html" title="jason.asSyntax.patterns.goal.BC" alt="" coords="707,17,747,42"/>
+<area shape="rect" id="node9" href="./BC.html" title="&lt;TABLE&gt;" alt="" coords="691,5,763,53"/>
+</map>

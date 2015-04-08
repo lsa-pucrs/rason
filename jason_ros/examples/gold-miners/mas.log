@@ -1,0 +1,183 @@
+[leader] Defining quadrants for 35x35 simulation 3
+[leader] Finished all quadrs for 3
+[miner1] Gold perceived: gold(1,1)
+[miner4] Gold perceived: gold(20,20)
+[miner4] Going for gold(20,20)
+[miner1] Going for gold(1,1)
+[miner1] No longer free while waiting for quadrant.
+[leader] - InitPos miner3 is 6x26
+[miner1] Handling gold(1,1) now.
+[leader] - InitPos miner2 is 20x0
+[miner4] No longer free while waiting for quadrant.
+[leader] - InitPos miner1 is 1x0
+[miner4] Handling gold(20,20) now.
+[leader] * InitPos miner4 is 20x20
+[miner4] Announcing gold(20,21) to others
+[miner4] I've reached 20x20
+[leader] bid from miner2 for gold(20,21) is 21
+[leader] bid from miner3 for gold(20,21) is 19
+[leader] bid from miner1 for gold(20,21) is 10000
+[leader] miner1's Quadrant is: 1
+[leader] Gold gold(20,21) was allocated to miner3 options were [op(10000,miner1),op(19,miner3),op(21,miner2)]
+[miner3] Gold gold(20,21) allocated to miner3
+[miner3] Going for gold(20,21)
+[miner3] Handling gold(20,21) now.
+[leader] miner2's Quadrant is: 2
+[leader] miner3's Quadrant is: 3
+[miner3] No longer free while waiting for quadrant.
+[leader] miner4's Quadrant is: 4
+[miner1] I've reached 1x1
+[miner2] in Q1 to 34x0
+[miner4] I've reached 16x16
+[WorldModel] Agent 4 carried a gold to depot!
+[miner4] Finish handling gold(20,20)
+[miner4] in no Q, going to X1
+[miner2] in Q2 to 17x2
+[miner4] Gold perceived: gold(20,21)
+[miner4] Dropping around(_,_) desires and intentions to handle gold(20,21)
+[miner4] Going for gold(20,21)
+[miner4] Handling gold(20,21) now.
+[miner4] I've reached 20x21
+[miner3] miner4 has taken gold(20,21) that I am pursuing! Dropping my intention.
+[miner4] I've reached 16x16
+[WorldModel] Agent 4 carried a gold to depot!
+[miner4] Finish handling gold(20,21)
+[miner2] in Q3 to 34x4
+[miner1] I've reached 16x16
+[miner2] Gold perceived: gold(19,2)
+[miner2] Dropping around(_,_) desires and intentions to handle gold(19,2)
+[miner2] Going for gold(19,2)
+[miner2] Handling gold(19,2) now.
+[WorldModel] Agent 1 carried a gold to depot!
+[miner1] Finish handling gold(1,1)
+[miner4] in no Q, going to X1
+[miner2] I've reached 19x2
+[miner3] in no Q, going to X1
+[miner4] in Q3 to 34x22
+[miner1] Gold perceived: gold(2,12)
+[miner1] Dropping around(_,_) desires and intentions to handle gold(2,12)
+[miner1] Going for gold(2,12)
+[miner1] Handling gold(2,12) now.
+[miner1] I've reached 2x12
+[miner4] in Q2 to 17x24
+[miner2] I've reached 16x16
+[WorldModel] Agent 2 carried a gold to depot!
+[miner2] Finish handling gold(19,2)
+[miner3] in Q3 to 16x28
+[miner4] in Q3 to 34x26
+[miner3] Gold perceived: gold(2,22)
+[miner3] Dropping around(_,_) desires and intentions to handle gold(2,22)
+[miner3] Going for gold(2,22)
+[miner3] Handling gold(2,22) now.
+[miner2] in no Q, going to X1
+[miner2] in Q3 to 34x3
+[miner3] I've reached 2x22
+[miner1] I've reached 16x16
+[WorldModel] Agent 1 carried a gold to depot!
+[miner1] Finish handling gold(2,12)
+[miner4] Gold perceived: gold(24,24)
+[miner4] Dropping around(_,_) desires and intentions to handle gold(24,24)
+[miner4] Going for gold(24,24)
+[miner4] Handling gold(24,24) now.
+[miner4] I've reached 24x24
+[miner2] in Q2 to 17x5
+[miner3] Announcing gold(15,20) to others
+[leader] bid from miner4 for gold(15,20) is 10000
+[leader] bid from miner2 for gold(15,20) is 36
+[leader] bid from miner1 for gold(15,20) is 16
+[leader] Gold gold(15,20) was allocated to miner1 options were [op(16,miner1),op(36,miner2),op(10000,miner4)]
+[miner1] Gold gold(15,20) allocated to miner1
+[miner1] Dropping around(_,_) desires and intentions to handle gold(15,20)
+[miner1] Going for gold(15,20)
+[miner1] Handling gold(15,20) now.
+[miner3] I've reached 16x16
+[WorldModel] Agent 3 carried a gold to depot!
+[miner3] Finish handling gold(2,22)
+[miner4] I've reached 16x16
+[WorldModel] Agent 4 carried a gold to depot!
+[miner4] Finish handling gold(24,24)
+[miner2] in Q3 to 34x7
+[miner1] I've reached 15x20
+[miner1] I've reached 16x16
+[miner4] in no Q, going to X1
+[WorldModel] Agent 1 carried a gold to depot!
+[miner1] Finish handling gold(15,20)
+[miner3] in no Q, going to X1
+[miner3] in Q3 to 16x25
+[miner4] in Q3 to 34x25
+[miner2] in Q2 to 17x9
+[miner1] in no Q, going to X1
+[miner3] in Q2 to 0x27
+[miner1] in Q3 to 16x15
+[miner4] in Q2 to 17x27
+[miner2] in Q3 to 34x11
+[miner4] in Q3 to 34x29
+[miner1] in Q2 to 0x16
+[miner3] in Q3 to 16x29
+[miner2] in Q2 to 17x13
+[miner4] in Q2 to 17x31
+[miner1] in Q3 to 16x16
+[miner2] in Q3 to 34x15
+[miner2] Gold perceived: gold(20,13)
+[miner2] Dropping around(_,_) desires and intentions to handle gold(20,13)
+[miner2] Going for gold(20,13)
+[miner2] Handling gold(20,13) now.
+[miner3] in Q2 to 0x31
+[miner2] I've reached 20x13
+[miner2] I've reached 16x16
+[WorldModel] Agent 2 carried a gold to depot!
+[miner2] Finish handling gold(20,13)
+[miner1] in Q4 to 0x0
+[miner4] in Q3 to 34x33
+[miner2] in no Q, going to X1
+[miner2] in Q3 to 34x14
+[miner3] in Q3 to 16x33
+[miner4] in Q2 to 17x34
+[miner2] in Q2 to 17x16
+[miner3] in Q2 to 0x34
+[miner1] in Q1 to 16x0
+[miner4] in Q3 to 34x34
+[miner3] in Q3 to 16x34
+[miner2] in Q3 to 34x16
+[miner1] in Q2 to 0x2
+[miner4] Gold perceived: gold(34,34)
+[miner4] Dropping around(_,_) desires and intentions to handle gold(34,34)
+[miner4] Going for gold(34,34)
+[miner4] Handling gold(34,34) now.
+[miner4] I've reached 34x34
+[miner3] in Q4 to 0x17
+[miner1] in Q3 to 16x4
+[miner2] in Q4 to 17x0
+[miner1] Gold perceived: gold(14,4)
+[miner1] Dropping around(_,_) desires and intentions to handle gold(14,4)
+[miner1] Going for gold(14,4)
+[miner1] Handling gold(14,4) now.
+[miner1] I've reached 14x4
+[miner3] in Q1 to 16x17
+[miner4] I've reached 16x16
+[WorldModel] Agent 4 carried a gold to depot!
+[miner4] Finish handling gold(34,34)
+[miner1] I've reached 16x16
+[WorldModel] Agent 1 carried a gold to depot!
+[miner1] Finish handling gold(14,4)
+[miner2] in Q1 to 34x0
+[miner3] in Q2 to 0x19
+[miner1] in no Q, going to X1
+[miner2] in Q2 to 17x2
+[miner3] in Q3 to 16x21
+[miner1] Gold perceived: gold(3,5)
+[miner1] Dropping around(_,_) desires and intentions to handle gold(3,5)
+[miner1] Going for gold(3,5)
+[miner1] Handling gold(3,5) now.
+[miner1] I've reached 3x5
+[miner4] in no Q, going to X1
+[miner2] in Q3 to 34x4
+[miner3] in Q2 to 0x23
+[miner4] in Q3 to 34x34
+[miner1] I've reached 16x16
+[WorldModel] Agent 1 carried a gold to depot!
+[miner1] Finish handling gold(3,5)
+[miner2] in Q2 to 17x6
+[miner3] in Q3 to 16x25
+[miner3] Failed next_step to 16x25 fixing and trying again!
+[miner2] Failed next_step to 17x6 fixing and trying again!

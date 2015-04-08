@@ -1,0 +1,10 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./StartNewAgentGUI.html" title="jason.infra.centralised.StartNewAgentGUI" alt="" coords="15,214,145,239"/>
+<area shape="rect" id="node1" href="./StartNewAgentGUI.html" title="&lt;TABLE&gt;" alt="" coords="5,203,155,251"/>
+<area shape="rect" id="node2_1" href="./KillAgentGUI.html" title="jason.infra.centralised.KillAgentGUI" alt="" coords="190,214,282,239"/>
+<area shape="rect" id="node2" href="./KillAgentGUI.html" title="&lt;TABLE&gt;" alt="" coords="179,203,293,251"/>
+<area shape="rect" id="node3_2" href="./BaseDialogGUI.html" title="jason.infra.centralised.BaseDialogGUI" alt="" coords="103,118,212,143"/>
+<area shape="rect" id="node3" href="./BaseDialogGUI.html" title="&lt;TABLE&gt;" alt="" coords="92,107,223,155"/>
+<area shape="rect" id="node6_3" href="http://java.sun.com/j2se/1.4.2/docs/api/javax/swing/JDialog.html" title="javax.swing.JDialog" alt="" coords="112,11,203,53"/>
+<area shape="rect" id="node6" href="http://java.sun.com/j2se/1.4.2/docs/api/javax/swing/JDialog.html" title="&lt;TABLE&gt;" alt="" coords="101,6,213,58"/>
+</map>

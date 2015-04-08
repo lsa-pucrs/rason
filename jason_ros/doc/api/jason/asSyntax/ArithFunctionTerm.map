@@ -1,0 +1,12 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./Term.html" title="jason.asSyntax.Term" alt="" coords="125,123,208,165"/>
+<area shape="rect" id="node1" href="./Term.html" title="&lt;TABLE&gt;" alt="" coords="115,118,219,170"/>
+<area shape="rect" id="node3_1" href="./NumberTerm.html" title="jason.asSyntax.NumberTerm" alt="" coords="15,227,107,269"/>
+<area shape="rect" id="node3" href="./NumberTerm.html" title="&lt;TABLE&gt;" alt="" coords="5,222,118,274"/>
+<area shape="rect" id="node2_2" href="./Structure.html" title="jason.asSyntax.Structure" alt="" coords="283,17,352,42"/>
+<area shape="rect" id="node2" href="./Structure.html" title="&lt;TABLE&gt;" alt="" coords="272,5,363,53"/>
+<area shape="rect" id="node4_3" href="./ArithFunctionTerm.html" title="jason.asSyntax.ArithFunctionTerm" alt="" coords="109,337,227,362"/>
+<area shape="rect" id="node4" href="./ArithFunctionTerm.html" title="&lt;TABLE&gt;" alt="" coords="99,325,237,373"/>
+<area shape="rect" id="node5_4" href="./ArithExpr.html" title="jason.asSyntax.ArithExpr" alt="" coords="60,435,132,461"/>
+<area shape="rect" id="node5" href="./ArithExpr.html" title="&lt;TABLE&gt;" alt="" coords="49,424,143,472"/>
+</map>

@@ -1,0 +1,12 @@
+// creates an MAS called auction 
+
+MAS auction {
+    
+    infrastructure: Centralised
+
+    agents: ag1; 
+            ag2; 
+            ag3; 
+            auctioneer //[mindinspector="gui(cycle,html,history)"] 
+                       agentArchClass AuctioneerGUI;
+}

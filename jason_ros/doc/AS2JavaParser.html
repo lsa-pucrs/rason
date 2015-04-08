@@ -1,0 +1,157 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+<TITLE>BNF for AS2JavaParser.jcc</TITLE>
+</HEAD>
+<BODY>
+<H1 ALIGN=CENTER>BNF for AS2JavaParser.jcc</H1>
+<H2 ALIGN=CENTER>NON-TERMINALS</H2>
+<TABLE>
+<TR>
+<TD ALIGN=RIGHT VALIGN=BASELINE><A NAME="prod1">agent</A></TD>
+<TD ALIGN=CENTER VALIGN=BASELINE>::=</TD>
+<TD ALIGN=LEFT VALIGN=BASELINE>( <A HREF="#prod2">directive</A> )* ( <A HREF="#prod3">belief</A> ( <A HREF="#prod2">directive</A> )* )* ( <A HREF="#prod4">initial_goal</A> ( <A HREF="#prod2">directive</A> )* )* ( <A HREF="#prod5">plan</A> ( <A HREF="#prod3">belief</A> )* ( <A HREF="#prod2">directive</A> )* )* &lt;EOF&gt;</TD>
+</TR>
+<TR>
+<TD ALIGN=RIGHT VALIGN=BASELINE><A NAME="prod2">directive</A></TD>
+<TD ALIGN=CENTER VALIGN=BASELINE>::=</TD>
+<TD ALIGN=LEFT VALIGN=BASELINE>"{" ( &lt;TK_BEGIN&gt; <A HREF="#prod6">pred</A> "}" <A HREF="#prod1">agent</A> | <A HREF="#prod6">pred</A> "}" )</TD>
+</TR>
+<TR>
+<TD ALIGN=RIGHT VALIGN=BASELINE><A NAME="prod3">belief</A></TD>
+<TD ALIGN=CENTER VALIGN=BASELINE>::=</TD>
+<TD ALIGN=LEFT VALIGN=BASELINE><A HREF="#prod7">literal</A> ( ":-" <A HREF="#prod8">log_expr</A> )? "."</TD>
+</TR>
+<TR>
+<TD ALIGN=RIGHT VALIGN=BASELINE><A NAME="prod4">initial_goal</A></TD>
+<TD ALIGN=CENTER VALIGN=BASELINE>::=</TD>
+<TD ALIGN=LEFT VALIGN=BASELINE>"!" <A HREF="#prod7">literal</A> "."</TD>
+</TR>
+<TR>
+<TD ALIGN=RIGHT VALIGN=BASELINE><A NAME="prod5">plan</A></TD>
+<TD ALIGN=CENTER VALIGN=BASELINE>::=</TD>
+<TD ALIGN=LEFT VALIGN=BASELINE>( &lt;TK_LABEL_AT&gt; <A HREF="#prod6">pred</A> )? <A HREF="#prod9">trigger</A> ( ":" <A HREF="#prod8">log_expr</A> )? ( "&lt;-" <A HREF="#prod10">plan_body</A> )? "."</TD>
+</TR>
+<TR>
+<TD ALIGN=RIGHT VALIGN=BASELINE><A NAME="prod9">trigger</A></TD>
+<TD ALIGN=CENTER VALIGN=BASELINE>::=</TD>
+<TD ALIGN=LEFT VALIGN=BASELINE>( "+" | "-" | "^" ) ( ( "!" | "?" ) )? <A HREF="#prod7">literal</A></TD>
+</TR>
+<TR>
+<TD ALIGN=RIGHT VALIGN=BASELINE><A NAME="prod10">plan_body</A></TD>
+<TD ALIGN=CENTER VALIGN=BASELINE>::=</TD>
+<TD ALIGN=LEFT VALIGN=BASELINE>( <A HREF="#prod11">stmtIF</A> | <A HREF="#prod12">stmtFOR</A> | <A HREF="#prod13">stmtWHILE</A> | <A HREF="#prod14">body_formula</A> ) ( ";" )? ( <A HREF="#prod10">plan_body</A> )?</TD>
+</TR>
+<TR>
+<TD ALIGN=RIGHT VALIGN=BASELINE><A NAME="prod11">stmtIF</A></TD>
+<TD ALIGN=CENTER VALIGN=BASELINE>::=</TD>
+<TD ALIGN=LEFT VALIGN=BASELINE>&lt;TK_IF&gt; "(" <A HREF="#prod8">log_expr</A> ")" <A HREF="#prod15">plan_term</A> ( ( &lt;TK_ELSE&gt; )? <A HREF="#prod15">plan_term</A> )?</TD>
+</TR>
+<TR>
+<TD ALIGN=RIGHT VALIGN=BASELINE><A NAME="prod12">stmtFOR</A></TD>
+<TD ALIGN=CENTER VALIGN=BASELINE>::=</TD>
+<TD ALIGN=LEFT VALIGN=BASELINE>&lt;TK_FOR&gt; "(" <A HREF="#prod8">log_expr</A> ")" <A HREF="#prod15">plan_term</A></TD>
+</TR>
+<TR>
+<TD ALIGN=RIGHT VALIGN=BASELINE><A NAME="prod13">stmtWHILE</A></TD>
+<TD ALIGN=CENTER VALIGN=BASELINE>::=</TD>
+<TD ALIGN=LEFT VALIGN=BASELINE>&lt;TK_WHILE&gt; "(" <A HREF="#prod8">log_expr</A> ")" <A HREF="#prod15">plan_term</A></TD>
+</TR>
+<TR>
+<TD ALIGN=RIGHT VALIGN=BASELINE><A NAME="prod14">body_formula</A></TD>
+<TD ALIGN=CENTER VALIGN=BASELINE>::=</TD>
+<TD ALIGN=LEFT VALIGN=BASELINE>( "!" | "!!" | "?" | ( "+" ( ( "+" | "&lt;" | "&gt;" ) )? ) | ( "-" ( "+" )? ) )? <A HREF="#prod8">log_expr</A></TD>
+</TR>
+<TR>
+<TD ALIGN=RIGHT VALIGN=BASELINE><A NAME="prod15">plan_term</A></TD>
+<TD ALIGN=CENTER VALIGN=BASELINE>::=</TD>
+<TD ALIGN=LEFT VALIGN=BASELINE>"{" ( ( &lt;TK_LABEL_AT&gt; <A HREF="#prod6">pred</A> )? <A HREF="#prod9">trigger</A> ( ":" <A HREF="#prod8">log_expr</A> )? ( ( "&lt;-" | ";" ) )? )? ( <A HREF="#prod10">plan_body</A> )? "}"</TD>
+</TR>
+<TR>
+<TD ALIGN=RIGHT VALIGN=BASELINE><A NAME="prod7">literal</A></TD>
+<TD ALIGN=CENTER VALIGN=BASELINE>::=</TD>
+<TD ALIGN=LEFT VALIGN=BASELINE>( ( ( &lt;TK_NEG&gt; )? ( <A HREF="#prod6">pred</A> | <A HREF="#prod16">var</A> ) ) | &lt;TK_TRUE&gt; | &lt;TK_FALSE&gt; )</TD>
+</TR>
+<TR>
+<TD ALIGN=RIGHT VALIGN=BASELINE><A NAME="prod6">pred</A></TD>
+<TD ALIGN=CENTER VALIGN=BASELINE>::=</TD>
+<TD ALIGN=LEFT VALIGN=BASELINE>( &lt;ATOM&gt; | &lt;TK_BEGIN&gt; | &lt;TK_END&gt; ) ( "(" <A HREF="#prod17">terms</A> ")" )? ( <A HREF="#prod15">plan_term</A> )* ( <A HREF="#prod18">list</A> )?</TD>
+</TR>
+<TR>
+<TD ALIGN=RIGHT VALIGN=BASELINE><A NAME="prod17">terms</A></TD>
+<TD ALIGN=CENTER VALIGN=BASELINE>::=</TD>
+<TD ALIGN=LEFT VALIGN=BASELINE><A HREF="#prod19">term</A> ( "," <A HREF="#prod19">term</A> )*</TD>
+</TR>
+<TR>
+<TD ALIGN=RIGHT VALIGN=BASELINE><A NAME="prod19">term</A></TD>
+<TD ALIGN=CENTER VALIGN=BASELINE>::=</TD>
+<TD ALIGN=LEFT VALIGN=BASELINE>( <A HREF="#prod18">list</A> | <A HREF="#prod15">plan_term</A> | <A HREF="#prod8">log_expr</A> )</TD>
+</TR>
+<TR>
+<TD ALIGN=RIGHT VALIGN=BASELINE><A NAME="prod18">list</A></TD>
+<TD ALIGN=CENTER VALIGN=BASELINE>::=</TD>
+<TD ALIGN=LEFT VALIGN=BASELINE>"[" ( <A HREF="#prod20">term_in_list</A> ( "," <A HREF="#prod20">term_in_list</A> )* ( "|" ( &lt;VAR&gt; | &lt;UNNAMEDVAR&gt; | <A HREF="#prod18">list</A> ) )? )? "]"</TD>
+</TR>
+<TR>
+<TD ALIGN=RIGHT VALIGN=BASELINE><A NAME="prod20">term_in_list</A></TD>
+<TD ALIGN=CENTER VALIGN=BASELINE>::=</TD>
+<TD ALIGN=LEFT VALIGN=BASELINE>( <A HREF="#prod18">list</A> | <A HREF="#prod21">arithm_expr</A> | <A HREF="#prod22">string</A> | <A HREF="#prod15">plan_term</A> )</TD>
+</TR>
+<TR>
+<TD ALIGN=RIGHT VALIGN=BASELINE><A NAME="prod8">log_expr</A></TD>
+<TD ALIGN=CENTER VALIGN=BASELINE>::=</TD>
+<TD ALIGN=LEFT VALIGN=BASELINE><A HREF="#prod23">log_expr_trm</A> ( "|" <A HREF="#prod8">log_expr</A> )?</TD>
+</TR>
+<TR>
+<TD ALIGN=RIGHT VALIGN=BASELINE><A NAME="prod23">log_expr_trm</A></TD>
+<TD ALIGN=CENTER VALIGN=BASELINE>::=</TD>
+<TD ALIGN=LEFT VALIGN=BASELINE><A HREF="#prod24">log_expr_factor</A> ( "&amp;" <A HREF="#prod23">log_expr_trm</A> )?</TD>
+</TR>
+<TR>
+<TD ALIGN=RIGHT VALIGN=BASELINE><A NAME="prod24">log_expr_factor</A></TD>
+<TD ALIGN=CENTER VALIGN=BASELINE>::=</TD>
+<TD ALIGN=LEFT VALIGN=BASELINE>( &lt;TK_NOT&gt; <A HREF="#prod24">log_expr_factor</A> | <A HREF="#prod25">rel_expr</A> )</TD>
+</TR>
+<TR>
+<TD ALIGN=RIGHT VALIGN=BASELINE><A NAME="prod25">rel_expr</A></TD>
+<TD ALIGN=CENTER VALIGN=BASELINE>::=</TD>
+<TD ALIGN=LEFT VALIGN=BASELINE>( <A HREF="#prod21">arithm_expr</A> | <A HREF="#prod22">string</A> ) ( ( "&lt;" | "&lt;=" | "&gt;" | "&gt;=" | "==" | "\\==" | "=" | "=.." ) ( <A HREF="#prod21">arithm_expr</A> | <A HREF="#prod22">string</A> | <A HREF="#prod18">list</A> | <A HREF="#prod15">plan_term</A> ) )?</TD>
+</TR>
+<TR>
+<TD ALIGN=RIGHT VALIGN=BASELINE><A NAME="prod21">arithm_expr</A></TD>
+<TD ALIGN=CENTER VALIGN=BASELINE>::=</TD>
+<TD ALIGN=LEFT VALIGN=BASELINE><A HREF="#prod26">arithm_expr_trm</A> ( ( "+" | "-" ) <A HREF="#prod26">arithm_expr_trm</A> )*</TD>
+</TR>
+<TR>
+<TD ALIGN=RIGHT VALIGN=BASELINE><A NAME="prod26">arithm_expr_trm</A></TD>
+<TD ALIGN=CENTER VALIGN=BASELINE>::=</TD>
+<TD ALIGN=LEFT VALIGN=BASELINE><A HREF="#prod27">arithm_expr_factor</A> ( ( "*" | "/" | &lt;TK_INTDIV&gt; | &lt;TK_INTMOD&gt; ) <A HREF="#prod27">arithm_expr_factor</A> )*</TD>
+</TR>
+<TR>
+<TD ALIGN=RIGHT VALIGN=BASELINE><A NAME="prod27">arithm_expr_factor</A></TD>
+<TD ALIGN=CENTER VALIGN=BASELINE>::=</TD>
+<TD ALIGN=LEFT VALIGN=BASELINE><A HREF="#prod28">arithm_expr_simple</A> ( ( "**" ) <A HREF="#prod27">arithm_expr_factor</A> )?</TD>
+</TR>
+<TR>
+<TD ALIGN=RIGHT VALIGN=BASELINE><A NAME="prod28">arithm_expr_simple</A></TD>
+<TD ALIGN=CENTER VALIGN=BASELINE>::=</TD>
+<TD ALIGN=LEFT VALIGN=BASELINE>( &lt;NUMBER&gt; | "-" <A HREF="#prod28">arithm_expr_simple</A> | "+" <A HREF="#prod28">arithm_expr_simple</A> | "(" <A HREF="#prod8">log_expr</A> ")" | <A HREF="#prod29">function</A> )</TD>
+</TR>
+<TR>
+<TD ALIGN=RIGHT VALIGN=BASELINE><A NAME="prod29">function</A></TD>
+<TD ALIGN=CENTER VALIGN=BASELINE>::=</TD>
+<TD ALIGN=LEFT VALIGN=BASELINE><A HREF="#prod7">literal</A></TD>
+</TR>
+<TR>
+<TD ALIGN=RIGHT VALIGN=BASELINE><A NAME="prod16">var</A></TD>
+<TD ALIGN=CENTER VALIGN=BASELINE>::=</TD>
+<TD ALIGN=LEFT VALIGN=BASELINE>( &lt;VAR&gt; | &lt;UNNAMEDVAR&gt; ) ( <A HREF="#prod18">list</A> )?</TD>
+</TR>
+<TR>
+<TD ALIGN=RIGHT VALIGN=BASELINE><A NAME="prod22">string</A></TD>
+<TD ALIGN=CENTER VALIGN=BASELINE>::=</TD>
+<TD ALIGN=LEFT VALIGN=BASELINE>&lt;STRING&gt;</TD>
+</TR>
+</TABLE>
+</BODY>
+</HTML>

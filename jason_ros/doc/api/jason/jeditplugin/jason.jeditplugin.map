@@ -1,0 +1,32 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./RunProjectListener.html" title="jason.jeditplugin.RunProjectListener" alt="" coords="16,11,141,53"/>
+<area shape="rect" id="node1" href="./RunProjectListener.html" title="&lt;TABLE&gt;" alt="" coords="5,6,152,58"/>
+<area shape="rect" id="node11_1" href="./JasonID.html" title="jason.jeditplugin.JasonID" alt="" coords="44,118,113,143"/>
+<area shape="rect" id="node11" href="./JasonID.html" title="&lt;TABLE&gt;" alt="" coords="33,107,124,155"/>
+<area shape="rect" id="node2_2" href="./NewProjectGUI.html" title="jason.jeditplugin.NewProjectGUI" alt="" coords="159,118,268,143"/>
+<area shape="rect" id="node2" href="./NewProjectGUI.html" title="&lt;TABLE&gt;" alt="" coords="148,107,279,155"/>
+<area shape="rect" id="node3_3" href="./NewInternalActionGUI.html" title="jason.jeditplugin.NewInternalActionGUI" alt="" coords="314,118,459,143"/>
+<area shape="rect" id="node3" href="./NewInternalActionGUI.html" title="&lt;TABLE&gt;" alt="" coords="303,107,470,155"/>
+<area shape="rect" id="node4_4" href="./NewEnvironmentGUI.html" title="jason.jeditplugin.NewEnvironmentGUI" alt="" coords="505,118,645,143"/>
+<area shape="rect" id="node4" href="./NewEnvironmentGUI.html" title="&lt;TABLE&gt;" alt="" coords="494,107,655,155"/>
+<area shape="rect" id="node5_5" href="./NewAgentGUI.html" title="jason.jeditplugin.NewAgentGUI" alt="" coords="335,19,439,45"/>
+<area shape="rect" id="node5" href="./NewAgentGUI.html" title="&lt;TABLE&gt;" alt="" coords="324,8,449,56"/>
+<area shape="rect" id="node6_6" href="./MASLauncherInfraTier.html" title="jason.jeditplugin.MASLauncherInfraTier" alt="" coords="485,11,630,53"/>
+<area shape="rect" id="node6" href="./MASLauncherInfraTier.html" title="&lt;TABLE&gt;" alt="" coords="474,6,641,58"/>
+<area shape="rect" id="node7_7" href="./JasonProjectSideKickParser.html" title="jason.jeditplugin.JasonProjectSideKickParser" alt="" coords="676,19,855,45"/>
+<area shape="rect" id="node7" href="./JasonProjectSideKickParser.html" title="&lt;TABLE&gt;" alt="" coords="665,8,865,56"/>
+<area shape="rect" id="node8_8" href="./JasonProjectImporter.html" title="jason.jeditplugin.JasonProjectImporter" alt="" coords="901,19,1038,45"/>
+<area shape="rect" id="node8" href="./JasonProjectImporter.html" title="&lt;TABLE&gt;" alt="" coords="890,8,1049,56"/>
+<area shape="rect" id="node9_9" href="./JasonIDPlugin.html" title="jason.jeditplugin.JasonIDPlugin" alt="" coords="1083,19,1186,45"/>
+<area shape="rect" id="node9" href="./JasonIDPlugin.html" title="&lt;TABLE&gt;" alt="" coords="1073,8,1197,56"/>
+<area shape="rect" id="node10_10" href="./JasonIDOptionPanel.html" title="jason.jeditplugin.JasonIDOptionPanel" alt="" coords="1231,19,1371,45"/>
+<area shape="rect" id="node10" href="./JasonIDOptionPanel.html" title="&lt;TABLE&gt;" alt="" coords="1221,8,1382,56"/>
+<area shape="rect" id="node12_11" href="./Config.html" title="jason.jeditplugin.Config" alt="" coords="1417,19,1474,45"/>
+<area shape="rect" id="node12" href="./Config.html" title="&lt;TABLE&gt;" alt="" coords="1406,8,1485,56"/>
+<area shape="rect" id="node13_12" href="./CheckVersion.html" title="jason.jeditplugin.CheckVersion" alt="" coords="1520,19,1619,45"/>
+<area shape="rect" id="node13" href="./CheckVersion.html" title="&lt;TABLE&gt;" alt="" coords="1509,8,1629,56"/>
+<area shape="rect" id="node14_13" href="./AgentSpeakSideKickParser.html" title="jason.jeditplugin.AgentSpeakSideKickParser" alt="" coords="1665,19,1842,45"/>
+<area shape="rect" id="node14" href="./AgentSpeakSideKickParser.html" title="&lt;TABLE&gt;" alt="" coords="1654,8,1853,56"/>
+<area shape="rect" id="node15_14" href="./AboutGUI.html" title="jason.jeditplugin.AboutGUI" alt="" coords="1888,19,1965,45"/>
+<area shape="rect" id="node15" href="./AboutGUI.html" title="&lt;TABLE&gt;" alt="" coords="1877,8,1976,56"/>
+</map>

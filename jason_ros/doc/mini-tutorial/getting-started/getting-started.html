@@ -1,0 +1,660 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>getting-started</TITLE>
+<META NAME="description" CONTENT="getting-started">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="../labs.css">
+
+</HEAD>
+
+<BODY >
+
+<P>
+
+  <div class=title>Getting started with <b><i>Jason</i></b></div>
+  <br/><br/>
+
+<P>
+This document aims to help you install and run <A HREF="http://jason.sf.net"><I><B>Jason</B></I></A>, as well as
+developing a simple multi-agent system using <A HREF="http://jason.sf.net"><I><B>Jason</B></I></A>.
+
+<P>
+<BR>
+
+<H2><A NAME="SECTION00010000000000000000">
+Contents</A>
+</H2>
+<!--Table of Contents-->
+
+<UL>
+<LI><A NAME="tex2html13"
+  HREF="getting-started.html#SECTION00020000000000000000">Installation and Configuration</A>
+<LI><A NAME="tex2html14"
+  HREF="getting-started.html#SECTION00030000000000000000">Execution of an example</A>
+<LI><A NAME="tex2html15"
+  HREF="getting-started.html#SECTION00040000000000000000">Creation of a simple example</A>
+<LI><A NAME="tex2html16"
+  HREF="getting-started.html#SECTION00050000000000000000">An example with environment</A>
+<LI><A NAME="tex2html17"
+  HREF="getting-started.html#SECTION00060000000000000000">Exercise</A>
+<LI><A NAME="tex2html18"
+  HREF="getting-started.html#SECTION00070000000000000000">More information</A>
+</UL>
+<!--End of Table of Contents-->
+<P>
+
+<H1><A NAME="SECTION00020000000000000000">
+Installation and Configuration</A>
+</H1>
+
+<P>
+
+<OL>
+<LI>Java JDK &gt;= 5.0 is required (<TT><A NAME="tex2html1"
+  HREF="http://java.sun.com">http://java.sun.com</A></TT>);
+</LI>
+<LI>Download <A HREF="http://jason.sf.net"><I><B>Jason</B></I></A> from <TT><A NAME="tex2html2"
+  HREF="http://jason.sf.net">http://jason.sf.net</A></TT>;
+</LI>
+<LI>Create a folder for your <A HREF="http://jason.sf.net"><I><B>Jason</B></I></A> installation and decompress the
+  distribution file in it;
+</LI>
+<LI>You can now execute <A HREF="http://jason.sf.net"><I><B>Jason</B></I></A>:
+  
+<UL>
+<LI>Windows: Double-click on Jason.exe
+</LI>
+<LI>MacOS: Double-click on Jason.app
+</LI>
+<LI>Linux: run bin/jason.sh
+  
+</LI>
+</UL>
+
+<P>
+<IMG
+  WIDTH="725" HEIGHT="505" ALIGN="BOTTOM" BORDER="0"
+ SRC="./screen-initial.png"
+ ALT="Image screen-initial">
+
+<P>
+As you can see, <A HREF="http://jason.sf.net"><I><B>Jason</B></I></A> runs as a plugin of
+  <A HREF="http://www.jedit.org/">jEdit</A> (a text editor developed in
+  Java). This is useful because, although in <A HREF="http://jason.sf.net"><I><B>Jason</B></I></A> agents are
+  programmed in a variant of AgentSpeak, in most cases you'll need to
+  do some Java programming (e.g., if you want to create an environment
+  where the agents are situated).
+
+<P>
+</LI>
+<LI>In some cases, it might be necessary to configure the directory
+  where Java JDK is installed. This can be done in the menu
+  Plugins -&gt; Plugins Options -&gt; Jason:
+
+<P>
+<IMG
+  WIDTH="682" HEIGHT="601" ALIGN="BOTTOM" BORDER="0"
+ SRC="./screen-conf.png"
+ ALT="Image screen-conf">
+
+<P>
+You can also change the Jason configuration by double clicking the
+  jason.jar file located in the lib directory.
+
+<P>
+</LI>
+<LI>Done! It's that simple!
+</LI>
+</OL>
+
+<P>
+You are now ready to run a <A HREF="http://jason.sf.net"><I><B>Jason</B></I></A> multi-agent system, as we explain
+next.
+
+<P>
+
+<H1><A NAME="SECTION00030000000000000000">
+Execution of an example</A>
+</H1>
+
+<P>
+<A HREF="http://jason.sf.net"><I><B>Jason</B></I></A> comes with many examples and demos. The examples are
+multi-agent system applications for simple scenarios. The demos are
+meant simply to show how to use some useful features of <A HREF="http://jason.sf.net"><I><B>Jason</B></I></A>. You
+can find a brief description of examples and demos at
+<TT><A NAME="tex2html3"
+  HREF="http://jason.sf.net">http://jason.sf.net</A></TT>.
+
+<P>
+We will now run the classic <I>Cleaning Robots</I> example:
+<BLOCKQUOTE>
+This is a very simple example, showing a robot that searches the
+  whole environment (represented as a grid) for pieces of garbage, and
+  when one is found, it takes it to another robot, located in the
+  centre of the grid, where there is an incinerator; the moving robot
+  then goes back to the place where the last piece of garbage was
+  found and continues the search from there. It is based on the
+  original scenario that Anand Rao used when he introduced the
+  AgentSpeak language.
+</BLOCKQUOTE>
+<P>
+<BLOCKQUOTE><IMG
+  WIDTH="365" HEIGHT="365" ALIGN="BOTTOM" BORDER="0"
+ SRC="./JasonEx-CR-ss1.png"
+ ALT="Image JasonEx-CR-ss1">
+
+</BLOCKQUOTE>
+
+<P>
+
+<OL>
+<LI>All <A HREF="http://jason.sf.net"><I><B>Jason</B></I></A> projects have a configuration file that ends with
+  <TT>.mas2j</TT>, so to open the cleaning robots example, open the
+  file <TT>examples/cleaning-robots/mars.mas2j</TT> that you'll find
+  in the folder where you installed <A HREF="http://jason.sf.net"><I><B>Jason</B></I></A>.
+
+<P>
+<IMG
+  WIDTH="727" HEIGHT="596" ALIGN="BOTTOM" BORDER="0"
+ SRC="./screen-mars.png"
+ ALT="Image screen-mars">
+
+<P>
+The project file defines the underlying infrastructure that has been
+  chosen for that project (Centralised, Jade, Saci, ...), the Java
+  class that implements the environment (MarsEnv), and the agents that
+  belong to this application (r1 searches for pieces of garbage and
+  r2 incinerates them).
+
+<P>
+</LI>
+<LI>To execute this application, click on the
+  icon <IMG
+  WIDTH="16" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="./run.png"
+ ALT="Image run">. Two windows are opened, the
+  first is the application GUI and the second is the <A HREF="http://jason.sf.net"><I><B>Jason</B></I></A> MAS
+  Console where all print messages are shown (MAS is a common
+  abbreviation of ``Multi-Agent Systems'').
+
+<P>
+<IMG
+  WIDTH="625" HEIGHT="286" ALIGN="BOTTOM" BORDER="0"
+ SRC="./screen-masconsole.png"
+ ALT="Image screen-masconsole">
+
+<P>
+</LI>
+<LI>To stop the MAS execution, click
+  on <IMG
+  WIDTH="16" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="./suspend.png"
+ ALT="Image suspend">, either in the MAS Console
+  or in jEdit.
+
+<P>
+</LI>
+</OL>
+
+<P>
+
+<H1><A NAME="SECTION00040000000000000000">
+Creation of a simple example</A>
+</H1>
+
+<P>
+In this section we will create a new and simple example where two
+agents, <TT>bob</TT> and <TT>tom</TT>, exchange greeting messages.
+
+<P>
+
+<OL>
+<LI>Click on the <IMG
+  WIDTH="17" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="./newProject.gif"
+ ALT="Image newProject"> icon and
+  fill in the ``project name'' field with <I>greeting</I>.
+
+<P>
+<IMG
+  WIDTH="444" HEIGHT="245" ALIGN="BOTTOM" BORDER="0"
+ SRC="./screen-newproject.png"
+ ALT="Image screen-newproject">
+
+<P>
+(Don't worry about the syntax error in the project, it is caused
+  because there are no agents in the system.)
+
+<P>
+</LI>
+<LI>Add a new agent called <TT>bob</TT> by clicking
+  on <IMG
+  WIDTH="16" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="./newAgent.gif"
+ ALT="Image newAgent"> and filling in only the
+  ``agent name'' field. Note that the agent name has to be an
+  AgentSpeak term, so it cannot start with an uppercase letter.
+
+<P>
+<IMG
+  WIDTH="411" HEIGHT="362" ALIGN="BOTTOM" BORDER="0"
+ SRC="./screen-newagent.png"
+ ALT="Image screen-newagent">
+
+<P>
+</LI>
+<LI>Do the same for <TT>tom</TT>.
+
+<P>
+</LI>
+<LI>As you can see, there is a skeleton for the agent's code: the
+  agent has no beliefs, but an initial goal <TT>start</TT> and one
+  plan to achieve this goal. The plan simply prints something when
+  triggered.
+
+<P>
+We will now change <TT>tom</TT>'s code so that it sends a ``hello''
+  message to <TT>bob</TT>. To send messages, an <I>internal action</I>
+  called <TT>.send</TT> is used:
+
+<P>
+<PRE>
+// Agent tom in project greeting.mas2j
+
+!start.
+
++!start : true &lt;- .send(bob,tell,hello).
+</PRE>
+
+<P>
+In <TT>bob</TT>' code, we remove the <TT>start</TT> goal (and its
+  related plan), leaving its program empty:
+<PRE>
+// Agent bob in project greeting.mas2j
+</PRE>
+
+<P>
+</LI>
+<LI>You can now run the project.  There is no output! However, in
+  the MAS Console, click on the debug
+  button <IMG
+  WIDTH="16" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="./debug.gif"
+ ALT="Image debug"> and then select, in a new
+  windows named ``Jason Mind Inspector'', the agent bob (if the
+  agent's list is empty, click once in the run button). The mind
+  inspector for <TT>bob</TT> will look as follows:
+
+<P>
+<IMG
+  WIDTH="567" HEIGHT="284" ALIGN="BOTTOM" BORDER="0"
+ SRC="./screen-mindinsp.png"
+ ALT="Image screen-mindinsp">
+
+<P>
+Note the <TT>bob</TT> has a belief <TT>hello[source(tom)]</TT>,
+  which means that it received <TT>tom</TT>'s message.
+
+<P>
+</LI>
+<LI>Suppose now that we want <TT>bob</TT> to react to this
+  message. Since the received message implies a belief addition, an
+  event like <TT>+hello[source(tom)]</TT> is produced and may trigger
+  the execution of the following plan:
+<PRE>
+// Agent bob in project greeting.mas2j
+
++hello[source(A)] &lt;- .print("I received a 'hello' from ",A).
+</PRE>
+  In the plan, <TT>A</TT> is a variable that contains the name of the
+  sender. In AgentSpeak, as in Prolog, identifiers that start with
+  uppercase letters are variables.
+
+<P>
+If you run the new version, the output will be:
+
+<P>
+<IMG
+  WIDTH="564" HEIGHT="134" ALIGN="BOTTOM" BORDER="0"
+ SRC="./screen-hello.png"
+ ALT="Image screen-hello">
+
+<P>
+</LI>
+<LI>Since <TT>bob</TT> is a polite agent, we will now make it send a
+  hello back to <TT>tom</TT>:
+<PRE>
+// Agent bob in project greeting.mas2j
+
++hello[source(A)] 
+  &lt;- .print("I received a 'hello' from ",A);
+     .send(A,tell,hello).
+</PRE>
+  and <TT>tom</TT> does the same:
+<PRE>
+// Agent tom in project greeting.mas2j
+
+!start.
+
++!start : true &lt;- .send(bob,tell,hello).
+
++hello[source(A)] 
+  &lt;- .print("I receive an hello from ",A);
+     .send(A,tell,hello).
+</PRE>
+
+<P>
+Before running the system, think what you would expect to happen.
+  Perhaps the agents will enter a kind of greeting loop?
+
+<P>
+</LI>
+<LI>Run the system and you will realise that there is no loop!  The
+  reason is because when bob receives the second hello, it already has
+  this belief in its belief base (BB). Since nothing changed in the
+  BB, no event was produced, and thus no plan triggered.
+
+<P>
+</LI>
+<LI>If you want to use JADE as the infrastructure, change the
+  project as follows:
+<PRE>
+MAS greeting {
+    infrastructure: Jade
+
+    agents:
+        bob;
+        tom;
+}
+</PRE>
+  Also change the configuration of the Jason Plugin to start the JADE
+  Sniffer agent as well:
+
+<P>
+<IMG
+  WIDTH="682" HEIGHT="601" ALIGN="BOTTOM" BORDER="0"
+ SRC="./screen-confjade.png"
+ ALT="Image screen-confjade">
+
+<P>
+The windows created when you run the system are shown below:
+
+<P>
+<IMG
+  WIDTH="1082" HEIGHT="653" ALIGN="BOTTOM" BORDER="0"
+ SRC="./screen-runjade.png"
+ ALT="Image screen-runjade">
+
+<P>
+</LI>
+</OL>
+
+<P>
+
+<H1><A NAME="SECTION00050000000000000000">
+An example with environment</A>
+</H1>
+
+<P>
+In this section we will create a system where one agent will perform
+one action in a simulated environment.
+
+<P>
+
+<OL>
+<LI>Create a new project called <TT>testenv</TT>.
+</LI>
+<LI>Add one agent called <TT>liz</TT> with the following code:
+<PRE>
+// Agent liz in project testeenv.mas2j
+
+!start.
+
++!start : true &lt;- burn.
+</PRE>
+
+<P>
+The plan's body has only the action, <TT>burn</TT>. Action here is
+  meant to an <I>environment action</I> (i.e., something that changes
+  the state of the environment), and not internal actions (the ones
+  which starts with a dot, or have a dot anywhere in their name).
+
+<P>
+</LI>
+<LI>The implementation of the <TT>burn</TT> action is done in an environment
+  class. To create this class, click on the
+  <IMG
+  WIDTH="16" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="./createEnv.gif"
+ ALT="Image createEnv"> icon and fill in the ``environment name''
+  field with ``TestEnv''.  
+
+<P>
+A skeleton for this class is added by <A HREF="http://jason.sf.net"><I><B>Jason</B></I></A>. Change it to be
+  exactly as follows:
+<PRE>
+// Environment code for project testenv.mas2j
+
+import jason.asSyntax.*;
+import jason.environment.*;
+import java.util.logging.*;
+
+public class TestEnv extends jason.environment.Environment {
+
+  private Logger logger = Logger.getLogger("testenv.mas2j."+TestEnv.class.getName());
+
+  /** Called before the MAS execution with the args informed in .mas2j */
+  @Override
+  public void init(String[] args) {    }
+
+  @Override
+  public boolean executeAction(String agName, Structure action) {
+    if (action.getFunctor().equals("burn")) {
+      addPercept(Literal.parseLiteral("fire"));
+      return true;
+    } else {
+      logger.info("executing: "+action+", but not implemented!");
+      return false;
+    }
+  }
+
+  /** Called before the end of MAS execution */
+  @Override
+  public void stop() {
+    super.stop();
+  }
+}
+</PRE>
+
+<P>
+When an agent attempts to execute an environment action, the method
+  <TT>executeAction</TT> of this class is executed. In this
+  implementation, if the action <TT>burn</TT> is executed, a new
+  percept <TT>fire</TT> becomes available to all agents.
+
+<P>
+</LI>
+<LI>Agent <TT>liz</TT> can now react to the perception of fire:
+<PRE>
+// Agent liz in project testeenv.mas2j
+
+!start.
+
++!start : true &lt;- burn.
+
++fire &lt;- run.
+</PRE>
+
+<P>
+(The implementation of the run action is left as an exercise.)
+</LI>
+</OL>
+
+<P>
+
+<H1><A NAME="SECTION00060000000000000000">
+Exercise</A>
+</H1>
+
+<P>
+Imagine a very simple environment formed by 4 locations (identified by 1, 2, 3,
+and 4) as in the figure below:
+
+<P>
+<DIV ALIGN="CENTER">
+<IMG
+  WIDTH="449" HEIGHT="327" ALIGN="BOTTOM" BORDER="0"
+ SRC="./ambiente.png"
+ ALT="Image ambiente">  
+
+</DIV>
+
+<P>
+A vacuum-cleaner robot should be programmed in AgentSpeak to maintain
+the environment clean. The available actions for the robot are:
+
+<UL>
+<LI><TT>suck</TT>: remove dirt at the robot's position;
+</LI>
+<LI><TT>left</TT>: move the left;
+</LI>
+<LI><TT>right</TT>: move to right;
+</LI>
+<LI><TT>up</TT>: move up;
+</LI>
+<LI><TT>down</TT>: move down.
+</LI>
+</UL>
+To help the robot decide what action to take, the following percepts
+are given:
+
+<UL>
+<LI><TT>dirty</TT>: the robot is in a dirty location; 
+</LI>
+<LI><TT>clean</TT>: the robot is in a clean location; 
+</LI>
+<LI><TT>pos(X)</TT>: the location of the robot is <I>X</I> (0 &lt; X &lt; 5).
+</LI>
+</UL>
+
+<P>
+The following diagram, using the Prometheus notation, illustrates the
+interactions between the robot and the environment.
+<DIV ALIGN="CENTER">
+<IMG
+  WIDTH="818" HEIGHT="332" ALIGN="BOTTOM" BORDER="0"
+ SRC="./overview.png"
+ ALT="Image overview">
+
+</DIV>
+
+<P>
+An implementation of the environment class is available
+<A HREF="VacuumCleaning-1.zip">here</A>.
+
+<P>
+<B>Some tips</B>
+
+<P>
+You can start programming your agent by thinking about how it should
+react to the available perception. For instance, what it should do
+when it perceives "dirty"? The action "suck", of course! In AgentSpeak,
+we program this reaction by means of a plan as follows:
+
+<P>
+<PRE>
++dirty &lt;- suck. // when dirty is perceived, do the action suck
+</PRE>
+
+<P>
+So, an initial and very reactive agent can simply react to every
+perception and be programmed as shown below (replace "someaction" for
+the action you think is the most suitable, you might also want to
+remove some of the plans):
+
+<P>
+<PRE>
++dirty  &lt;- someaction.
++clean  &lt;- someaction.
++pos(1) &lt;- someaction.
++pos(2) &lt;- someaction.
++pos(3) &lt;- someaction.
++pos(4) &lt;- someaction.
+</PRE>
+
+<P>
+Since all perception is also included in the belief base, they can
+also be used to select the right plan, as in the following example:
+
+<P>
+<PRE>
++pos(1) : clean &lt;- someaction.   // whenever I perceive I'm in pos(1) and
+                                 // I believe that my position is clean, 
+                                 // do some action.
+</PRE>
+
+<P>
+You will soon realise that this reactive approach has some limitation
+in defining a good behaviour for our vacuum cleaner. In fact, this agent
+should be defined has having <I>goals</I>, in particular, a persistent
+goal of maintaining the house clean. The easiest way to define a
+persistent goal is by a recursive plan; for example, the code below
+implements the persistent goal (represented by p) of printing out "a":
+
+<P>
+<PRE>
+!p.                   // initial goal
++!p &lt;- .print(a); !p. // to achieve the goal p, print "a" 
+                      // and after has p as a new goal.
+</PRE>
+
+<P>
+(some comments on possible solutions for this exercise are available
+<A HREF="exercise-answers.txt">here</A>; send an email to
+<A HREF="mailto:jason.developers@gmail.com">jason.developers@gmail.com</A> asking
+for the username and password required to download this file)
+
+<P>
+This document has shown a very limited range of <A HREF="http://jason.sf.net"><I><B>Jason</B></I></A>'s features; the
+next section contains references where you can find further
+information.
+
+<P>
+
+<H1><A NAME="SECTION00070000000000000000">
+More information</A>
+</H1>
+
+<P>
+You can find more information about <A HREF="http://jason.sf.net"><I><B>Jason</B></I></A> at:
+
+<UL>
+<LI><A HREF="http://jason.sf.net"><I><B>Jason</B></I></A> website: <TT><A NAME="tex2html4"
+  HREF="http://jason.sf.net">http://jason.sf.net</A></TT> (mailing lists,
+  publications, etc.)
+</LI>
+<LI><A HREF="http://jason.sf.net"><I><B>Jason</B></I></A> book: <TT><A NAME="tex2html5"
+  HREF="http://jason.sf.net/jBook">http://jason.sf.net/jBook</A></TT>
+</LI>
+<LI>The documentation included in the <TT>doc</TT> directory of the
+  distribution (manual, FAQ, API, etc.)
+</LI>
+</UL>
+
+<P>
+<BR><HR>
+
+</BODY>
+</HTML>

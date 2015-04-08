@@ -1,0 +1,1692 @@
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>faq</TITLE>
+<META NAME="description" CONTENT="faq">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="faq.css">
+
+</HEAD>
+
+<BODY >
+
+<P>
+<h0><b><i>Jason</i></b> FAQ
+      <br><font size="-1">(for version > 1.3.7)</font></h0>
+
+<P>
+<BR>
+
+<H2><A NAME="SECTION00010000000000000000">
+Contents</A>
+</H2>
+<!--Table of Contents-->
+
+<UL>
+<LI><A NAME="tex2html50"
+  HREF="faq.html#SECTION00020000000000000000">1 General</A>
+<UL>
+<LI><A NAME="tex2html51"
+  HREF="faq.html#SECTION00021000000000000000">1.1 Why is the platform called "Jason"?</A>
+<LI><A NAME="tex2html52"
+  HREF="faq.html#SECTION00022000000000000000">1.2 How to configure Jason?</A>
+</UL>
+<BR>
+<LI><A NAME="tex2html53"
+  HREF="faq.html#SECTION00030000000000000000">2 Internal Actions</A>
+<UL>
+<LI><A NAME="tex2html54"
+  HREF="faq.html#SECTION00031000000000000000">2.1 How to create a new internal actions?</A>
+</UL>
+<BR>
+<LI><A NAME="tex2html55"
+  HREF="faq.html#SECTION00040000000000000000">3 Environment</A>
+<UL>
+<LI><A NAME="tex2html56"
+  HREF="faq.html#SECTION00041000000000000000">3.1 Is it possible to call an internal action from the
+environment?</A>
+<LI><A NAME="tex2html57"
+  HREF="faq.html#SECTION00042000000000000000">3.2 How to discover the name of the agents in the environment initialisation?</A>
+</UL>
+<BR>
+<LI><A NAME="tex2html58"
+  HREF="faq.html#SECTION00050000000000000000">4 MAS Execution</A>
+<UL>
+<LI><A NAME="tex2html59"
+  HREF="faq.html#SECTION00051000000000000000">4.1 How to delay the MAS execution?</A>
+<LI><A NAME="tex2html60"
+  HREF="faq.html#SECTION00052000000000000000">4.2 Is it possible to add/remove an agent to/from a running MAS?</A>
+<LI><A NAME="tex2html61"
+  HREF="faq.html#SECTION00053000000000000000">4.3 How to set the classpath for running a system?</A>
+<LI><A NAME="tex2html62"
+  HREF="faq.html#SECTION00054000000000000000">4.4 Which execution modes are available?</A>
+<LI><A NAME="tex2html63"
+  HREF="faq.html#SECTION00055000000000000000">4.5 How to run my application without JasonIDE</A>
+<LI><A NAME="tex2html64"
+  HREF="faq.html#SECTION00056000000000000000">4.6 How can I control agents' execution?</A>
+<LI><A NAME="tex2html65"
+  HREF="faq.html#SECTION00057000000000000000">4.7 Is it possible to use only the Jason BDI engine?</A>
+</UL>
+<BR>
+<LI><A NAME="tex2html66"
+  HREF="faq.html#SECTION00060000000000000000">5 Debug tools</A>
+<UL>
+<LI><A NAME="tex2html67"
+  HREF="faq.html#SECTION00061000000000000000">5.1 How to setup verbosity of an agent?</A>
+<LI><A NAME="tex2html68"
+  HREF="faq.html#SECTION00062000000000000000">5.2 How to log the overall execution?</A>
+<LI><A NAME="tex2html69"
+  HREF="faq.html#SECTION00063000000000000000">5.3 How to log agents' mind states?</A>
+</UL>
+<BR>
+<LI><A NAME="tex2html70"
+  HREF="faq.html#SECTION00070000000000000000">6 Jason Infrastructures</A>
+<UL>
+<LI><A NAME="tex2html71"
+  HREF="faq.html#SECTION00071000000000000000">6.1 What are infrastructures for?</A>
+<LI><A NAME="tex2html72"
+  HREF="faq.html#SECTION00072000000000000000">6.2 Which infrastructures are available?</A>
+<LI><A NAME="tex2html73"
+  HREF="faq.html#SECTION00073000000000000000">6.3 How to select an infrastructure?</A>
+<LI><A NAME="tex2html74"
+  HREF="faq.html#SECTION00074000000000000000">6.4 When should I use the JADE infrastructures?</A>
+</UL>
+<BR>
+<LI><A NAME="tex2html75"
+  HREF="faq.html#SECTION00080000000000000000">7 JADE </A>
+<UL>
+<LI><A NAME="tex2html76"
+  HREF="faq.html#SECTION00081000000000000000">7.1 How to customise the JADE container?</A>
+<LI><A NAME="tex2html77"
+  HREF="faq.html#SECTION00082000000000000000">7.2 How to start a Jason agent with jade.Boot?</A>
+<LI><A NAME="tex2html78"
+  HREF="faq.html#SECTION00083000000000000000">7.3 How can I customise the Jade sniffer?</A>
+<LI><A NAME="tex2html79"
+  HREF="faq.html#SECTION00084000000000000000">7.4 How to run my agents on several machines with JADE?</A>
+</UL>
+<BR>
+<LI><A NAME="tex2html80"
+  HREF="faq.html#SECTION00090000000000000000">8 AgentSpeak Language</A>
+<UL>
+<LI><A NAME="tex2html81"
+  HREF="faq.html#SECTION00091000000000000000">8.1 What exactly are the cases where negative events of the forms "-!p" and "-?p" are generated?</A>
+<LI><A NAME="tex2html82"
+  HREF="faq.html#SECTION00092000000000000000">8.2 Does "+p" (or "-p") in a plan body cause two effects, i.e. updating the belief base and generating the events "+p" (or "-p")?</A>
+<LI><A NAME="tex2html83"
+  HREF="faq.html#SECTION00093000000000000000">8.3 Does "?p" in a plan body cause two effects, i.e. testing p
+from the belief base and generating the events "+?p"? Is "-?p" generated when a test goal "?p" fails? When does the test goal "?p" fail?</A>
+<LI><A NAME="tex2html84"
+  HREF="faq.html#SECTION00094000000000000000">8.4 It is claimed that open-world assumption is available. What
+does this mean? Do we have a three-valued logic?</A>
+<LI><A NAME="tex2html85"
+  HREF="faq.html#SECTION00095000000000000000">8.5 What's the difference between ! and !!?</A>
+<LI><A NAME="tex2html86"
+  HREF="faq.html#SECTION00096000000000000000">8.6 Why is Jason's plan failure mechanism different from other agent platforms?</A>
+<LI><A NAME="tex2html87"
+  HREF="faq.html#SECTION00097000000000000000">8.7 Which information is available to failure handling plans ?</A>
+</UL>
+<BR>
+<LI><A NAME="tex2html88"
+  HREF="faq.html#SECTION000100000000000000000">9 Developing Jason</A>
+<UL>
+<LI><A NAME="tex2html89"
+  HREF="faq.html#SECTION000101000000000000000">9.1 How to build Jason from SourceForge SVN (subversion)?</A>
+<LI><A NAME="tex2html90"
+  HREF="faq.html#SECTION000102000000000000000">9.2 Do I have to use Jason with jEdit?</A>
+<LI><A NAME="tex2html91"
+  HREF="faq.html#SECTION000103000000000000000">9.3 How to create an Eclipse project for Jason?</A>
+</UL></UL>
+<!--End of Table of Contents-->
+<P>
+
+<H1><A NAME="SECTION00020000000000000000">
+1 General</A>
+</H1>
+
+<P>
+
+<H2><A NAME="SECTION00021000000000000000">
+1.1 Why is the platform called "Jason"?</A>
+</H2>
+
+<P>
+Jason initially stood for `<B>J</B>ava-based <B>A</B>gentSpeak interpreter
+used with <B>S</B>ACI for multi-agent distribution <B>o</B>ver the
+<B>n</B>et'. Since it not based only on SACI anymore (other infrastructures
+are available) and the acronyms was quite `forced', we decided the use Jason
+as a proper name for the interpreter.
+
+<P>
+The name is also somehow inspired by <A HREF="http://jason.sf.net"><I>Jason</I></A> in Greek mythology. Click
+
+  <a
+  href="http://www.perseus.tufts.edu/cgi-bin/ptext?doc=Perseus%3Atext%3A1999.04.0004%3Ahead%3D%234815">here</a>
+
+for an entry on "Jason" in the Perseus Encyclopaedia (Perseus is an
+excellent source of Classics, maintained by Tufts University).
+
+<P>
+
+<H2><A NAME="SECTION00022000000000000000">
+1.2 How to configure Jason?</A>
+</H2>
+
+<P>
+<A HREF="http://jason.sf.net"><I>Jason</I></A> requires some information about your local configuration, for
+example, the location of the Java installation. You can change the
+configuration by double clicking the <TT>jason.jar</TT> file that is
+located in the lib directory. Alternatively, in a command shell you can run
+<PRE>
+    $ java -jar lib/jason.jar
+</PRE>
+
+<P>
+
+<H1><A NAME="SECTION00030000000000000000">
+2 Internal Actions</A>
+</H1>
+
+<P>
+
+<H2><A NAME="SECTION00031000000000000000">
+2.1 How to create a new internal actions?</A>
+</H2>
+
+<P>
+The following steps will help you to define your internal action
+(IA). The steps 1-4,6 are automatically done by Jason IDE, see menu
+Plugin-&gt;Jason-&gt;New internal action".
+
+<P>
+
+<OL>
+<LI>In your MAS project directory, create a sub-directory called
+  <TT>myLib</TT> (user's internal actions must be placed in a Java
+  package, which provides a library of actions). In case this package
+  directory is under your project directory, <A HREF="http://jason.sf.net"><I>Jason</I></A> automatically sets
+  the classpath.
+
+<P>
+</LI>
+<LI>Copy an existing <A HREF="http://jason.sf.net"><I>Jason</I></A> internal action
+  (<TT>Jason/src/stdlib/concat.java</TT>, for instance) to the
+  <TT>myLib</TT> directory. This file will be used as a skeleton for
+  your new IA.
+
+<P>
+</LI>
+<LI>Rename the file <TT>myLib/concat.java</TT> to
+  <TT>myLib/myIA.java</TT>.
+
+<P>
+</LI>
+<LI>Edit this file and change the <TT>package</TT> name to
+  <TT>myLib</TT>, and the class name to <TT>myIA</TT>.
+
+<P>
+The code will likely look like
+<PRE>
+package myLib;
+
+import jason.asSemantics.*;
+import jason.asSyntax.*;
+
+public class myIA extends DefaultInternalAction {
+   public Object execute(TransitionSystem ts, 
+                         Unifier un, 
+                         Term[] args) 
+                 throws Exception {
+      ....
+   }
+}
+</PRE>
+
+<P>
+</LI>
+<LI>Code the <TT>execute</TT> method in order to implement the
+  internal action.
+
+<P>
+</LI>
+<LI>Compile the new class
+<PRE>
+cd &lt;your project directory&gt;
+javac -classpath ...../Jason/lib/jason.jar:. myLib/myIA.java
+</PRE>
+
+<P>
+</LI>
+<LI>Use the new IA in AgentSpeak sources, for example:
+<PRE>
++a(X) : true
+   &lt;- ... ;
+      myLib.myIA(A,B);
+      ... .
+</PRE>
+
+<P>
+</LI>
+</OL>
+
+<P>
+
+<H1><A NAME="SECTION00040000000000000000">
+3 Environment</A>
+</H1>
+
+<P>
+
+<H2><A NAME="SECTION00041000000000000000">
+3.1 Is it possible to call an internal action from the
+environment?</A>
+</H2>
+
+<P>
+Most of the internal actions (IAs) are developed from an agent
+perspective, since they are conceived to be called by agents. Thus the
+<TT>execute</TT> method needs an agent's
+<TT>TransitionSystem</TT> (TS) to be executed (e.g. <TT>.my_name</TT> only makes
+sense when called by an agent).
+
+<P>
+
+<H2><A NAME="SECTION00042000000000000000">
+3.2 How to discover the name of the agents in the environment initialisation?</A>
+</H2>
+
+<P>
+As the environment is created before the agents, the set of agents
+is empty when the environment is created and thus the method
+<TT>getEnvironmentInfraTier().getRuntimeServices().getAgentsNames()</TT>
+cannot be used. However, if the set of agents is defined only by the
+.mas2j project file (i.e., no agent is dynamically created), the name
+of the agents can be obtained from that file.
+
+<P>
+For instance, a project file called <TT>ag-names.mas2j</TT> can be
+passed as parameter to the environment as in the following example:
+
+<P>
+<PRE>
+MAS ag_names {
+     environment: TestEnv("ag-names.mas2j")
+     agents:   a #10;   b;
+}
+</PRE>
+
+<P>
+The following code (in the environment initialisation) can then get
+all the names:
+
+<P>
+<PRE>
+public void init(String[] args) {
+   // args[0] is the name of the project file
+   try {
+      // parse that file
+      jason.mas2j.parser.mas2j parser =
+          new jason.mas2j.parser.mas2j(new FileInputStream(args[0]));
+      MAS2JProject project = parser.mas();
+			
+      List&lt;String&gt; names = new ArrayList&lt;String&gt;();
+      // get the names from the project
+      for (AgentParameters ap : project.getAgents()) {
+         String agName = ap.name;
+         for (int cAg = 0; cAg &lt; ap.qty; cAg++) {
+            String numberedAg = agName;
+            if (ap.qty &gt; 1) {
+               numberedAg += (cAg + 1);
+            }
+         names.add(numberedAg);
+      }
+   }
+   logger.info("Agents' name: "+names);
+   ...
+</PRE>
+
+<P>
+
+<H1><A NAME="SECTION00050000000000000000">
+4 MAS Execution</A>
+</H1>
+
+<P>
+
+<H2><A NAME="SECTION00051000000000000000">
+4.1 How to delay the MAS execution?</A>
+</H2>
+
+<P>
+If you have an environment class, the easiest way is simply adding a
+thread `sleep' in the <TT>executeAction</TT> method. For example:
+<PRE>
+    ...
+    public boolean executeAction(String agent, Term action) {
+        ...
+        try { 
+          Thread.sleep(500); 
+        } catch (Exception e) {}
+        ...
+    }
+</PRE>
+
+<P>
+In case the agents do not act in the environment or there is no
+environment class, you should write a controller class (see
+<A HREF="#sec:controlclass">[*]</A>).
+
+<P>
+For instance, the controller class could be:
+<PRE>
+package myPkg;
+import ...
+public class MyExecutionControl extends ExecutionControl {
+    protected void allAgsFinished() {
+        try { 
+          Thread.sleep(500); 
+        } catch (Exception e) {}
+    }
+}
+</PRE>
+
+<P>
+To use this controller, the project file must be
+<PRE>
+MAS test {
+    ...
+    executionControl: myPkg.MyExecutionControl
+
+    agents:  ...
+}
+</PRE>
+
+<P>
+
+<H2><A NAME="SECTION00052000000000000000">
+4.2 Is it possible to add/remove an agent to/from a running MAS?</A>
+</H2>
+
+<P>
+The internal action <TT>.create_agent</TT> can be used to dynamically
+add a new agent into the running MAS. For example, when the plan:
+<PRE>
++a : true 
+   &lt;- ... ; 
+      .create_agent(bob, "myAgent.asl");
+      ... .
+</PRE>
+is executed, it will create a new agent called "bob" based on the
+AgentSpeak code available at file "myAgent.asl".
+
+<P>
+Analogously, the internal action <TT>.kill_agent(&lt;agent name&gt;)</TT>
+removes the agent identified by <TT>&lt;agent name&gt;</TT> from the current
+MAS. The <TT>demos/create-agent</TT> project that comes with the Jason
+distribution files has examples of using these features.
+
+<P>
+New agents can also be created in the user Java code, for example:
+
+<P>
+<PRE>
+public class myEnv extends Environment {
+  ...
+  public boolean executeAction(String ag, Term action) {
+    ...
+    getEnvironmentInfraTier().getRuntimeServices().
+     .createAgent(
+         "anotherAg",     // agent name
+         "ag1.asl",       // AgentSpeak source
+         null,            // default agent class
+         null,            // default architecture class
+         null,            // default belief base parameters
+         null);           // default settings
+  }
+}
+</PRE>
+The
+<A HREF="http://jason.sourceforge.net/api/jason/runtime/RuntimeServicesInfraTier.html">RuntimeServices</A>
+interface, used in the code above, provides useful services
+transparently from the underlying infrastructure (Centralised, Jade,
+...). The interface's methods include agent creation, agent killing,
+and halting the system (see the API documentation for more
+information).
+
+<P>
+Note that if you're using the <A HREF="http://jade.tilab.com/">J<SMALL>ADE</SMALL></A> infrastructure, new
+agents (possibly not <A HREF="http://jason.sf.net"><I>Jason</I></A> agents, see <A HREF="#sec:whyjade">[*]</A>) can
+enter the MAS using <A HREF="http://jade.tilab.com/">J<SMALL>ADE</SMALL></A> features for open MAS.
+
+<P>
+
+<H2><A NAME="SECTION00053000000000000000">
+4.3 How to set the classpath for running a system?</A>
+</H2>
+
+<P>
+There are three ways to set the classpath of a project:
+
+<OL>
+<LI>Create a lib directory in the project and include the jar files
+  there. The ant script created by <A HREF="http://jason.sf.net"><I>Jason</I></A> to run the project
+  (bin/build.xml) includes lib/*.jar in the classpath. This approach
+  is used in examples/gold-miners.
+
+<P>
+</LI>
+<LI>In case you do not want to copy files into the project, the
+  <TT>classpath</TT> entry in the .mas2j file can be used:
+<PRE>
+MAS masid {
+   agents: .......
+   classpath: "../../jdom.jar"; 
+              "../../otherproject/classes";
+              "/apache/**/*.jar; // all jar files below /apache
+}
+</PRE>
+  Several items can be added as strings separated by ";". This
+  approach is used in examples/sniffer.
+
+<P>
+</LI>
+<LI>If a more customised startup is required for your system, create
+  a file named bin/c-build.xml with the template below:
+
+<P>
+<PRE>
+&lt;project name ="mybuild" basedir=".."&gt;
+    &lt;import file="build.xml"/&gt;
+	
+    &lt;target name="user-init"&gt;
+        &lt;!-- add here all your custom initialisation --&gt;
+    &lt;/target&gt;
+	
+    &lt;target name="user-end"&gt;
+        &lt;!-- add here all your custom termination --&gt;
+    &lt;/target&gt;
+
+    &lt;!-- you can also "override" other tasks from build.xml --&gt;
+&lt;/project&gt;
+</PRE>
+  If a c-build.xml file exists, it is used to run your application
+  instead of build.xml that is automatically created by Jason.
+</LI>
+</OL>
+
+<P>
+
+<H2><A NAME="SECTION00054000000000000000">
+4.4 Which execution modes are available?</A>
+</H2>
+
+<P>
+<A HREF="http://jason.sf.net"><I>Jason</I></A> is distributed with three execution modes:
+
+<UL>
+<LI><B>Asynchronous</B>: all agents run asynchronously. An agent goes to
+  its next reasoning cycle as soon as it has finished its current cycle.  This
+  is the <I>default</I> execution mode.
+
+<P>
+</LI>
+<LI><B>Synchronous</B>: all agents perform one reasoning cycle at every
+  "global execution step".  When an agent finished its reasoning cycle, it
+  informs the Jason controller and waits for a "carry on" signal.  The Jason
+  controller waits until all agents have finished their reasoning cycles and
+  then sends the "carry on" signal to them.
+
+<P>
+To use this execution mode, you have to set up a controller class in
+the .mas2j configuration, for example:
+<PRE>
+MAS test {
+    infrastructure: Centralised
+    environment: testEnv
+
+    executionControl: jason.control.ExecutionControl
+
+    agents:  ...
+}
+</PRE>
+
+<P>
+The <TT>jason.control.ExecutionControl</TT> class implements exactly the "Jason
+controller" for the synchronous execution mode described above.
+
+<P>
+</LI>
+<LI><B>Debug</B>: this execution mode is similar to the synchronous mode,
+  except that the <A HREF="http://jason.sf.net"><I>Jason</I></A> controller will also wait until the user clicks on a
+  ``Step'' button before sending the ``carry on'' signal to the agents.
+
+<P>
+To use this execution mode you can just press the ``debug'' button rather
+  than the ``run'' button of the IDE, or you can set up a debug controller
+  class in the .mas2j configuration, for example:
+<PRE>
+MAS test {
+    infrastructure: Centralised
+    environment: testEnv
+
+    executionControl: jason.control.ExecutionControlGUI
+
+    agents:  ...
+}
+</PRE>
+
+<P>
+The <TT>jason.control.ExecutionControlGUI</TT> class implements the
+  "Jason controller" with a GUI for debugging. This graphical tool is
+  called "<A HREF="http://jason.sf.net"><I>Jason</I></A>'s Mind Inspector", as it allows users to observe all
+  changes in agents' mental attitudes after a (number of) reasoning
+  cycle(s). This also applies to distributed agents (using <A HREF="http://jade.tilab.com/">J<SMALL>ADE</SMALL></A>).
+
+<P>
+</LI>
+</UL>
+
+<P>
+
+<H2><A NAME="SECTION00055000000000000000">
+4.5 How to run my application without JasonIDE</A>
+</H2>
+
+<P>
+The IDE (jEdit plugin) creates an Ant script (in the bin sub-directory
+of your application directory) and then simply runs this script to start your
+application. You can thus run it in a command prompt as follows:
+<PRE>
+   cd &lt;the directory of you application&gt;/bin
+   ant
+</PRE>
+
+<P>
+You can also run it as a normal Java application:
+<PRE>
+   cd &lt;the directory of you application&gt;
+   export CLASSPATH=&lt;your jars, jason.jar,...&gt;
+   java jason.infra.centralised.RunCentralisedMAS &lt;yourproject.mas2j file&gt;
+</PRE>
+You find more details about the environment (e.g. classpath) on the generated
+bin/build.xml file of your application.
+
+<P>
+A third way to run your application is to create a jar file for it. There is
+an option for that in the menu Plugins-Jason, or
+<PRE>
+   cd &lt;the directory of you application&gt;
+   ant -f bin/build.xml jar
+   java -jar &lt;your application&gt;.jar
+</PRE>
+
+<P>
+
+<H2><A NAME="SECTION00056000000000000000">&#160;</A><A NAME="sec:controlclass">&#160;</A>
+<BR>
+4.6 How can I control agents' execution?
+</H2>
+
+<P>
+If you have other specific needs for controlling agents' execution, you have
+to implement an <TT>ExecutionControl</TT> sub-class and specify it in the .mas2j
+file.
+
+<P>
+You will most likely have to override the following methods:
+
+<P>
+<PRE>
+public void receiveFinishedCycle(String agName, boolean breakpoint) {
+   super.receiveFinishedCycle(agName, breakpoint);
+   ... your code ...
+}
+protected void allAgsFinished() {
+   ... your code ...
+}
+</PRE>
+
+<P>
+These methods are called by <A HREF="http://jason.sf.net"><I>Jason</I></A> when one agent has finished its reasoning
+cycle and when all agents have finished the current "global execution step".
+
+<P>
+To signal the agents to "carry on", your class can use the following code:
+<PRE>
+   fJasonControl.informAllAgsToPerformCycle();
+</PRE>
+
+<P>
+You should have a look at the <TT>ExecutionControlGUI</TT> class for an example
+of how to do this, and the API documentation for further available methods
+inherited from <TT>ExecutionControl</TT>.
+
+<P>
+
+<H2><A NAME="SECTION00057000000000000000">
+4.7 Is it possible to use only the </A><A HREF="http://jason.sf.net"><I>Jason</I></A> BDI engine?
+</H2>
+
+<P>
+If you want to use only the <A HREF="http://jason.sf.net"><I>Jason</I></A> interpreter for a variant of
+AgentSpeak, you can implement your own agent class where the <A HREF="http://jason.sf.net"><I>Jason</I></A> 
+available infrastructures are not used.  This class must function as
+an "overall agent architecture" for the AgentSpeak interpreter, i.e.,
+it has to send percepts to the interpreter and get the agent actions
+(which result from the AgentSpeak "reasoning cycles").
+
+<P>
+Suppose you need a simple agent that interprets and reasons according
+to the following AgentSpeak source:
+<PRE>
++x(N) : N &lt; 3  &lt;- do(0).
+
++x(N) : N &gt;= 3 &lt;- do(50).
+</PRE>
+
+<P>
+The following class implements the required architecture (the complete
+code is available in the `demos' directory in the <A HREF="http://jason.sf.net"><I>Jason</I></A> distribution).  This
+code simply adds <TT>x(10)</TT> into the agent's belief base through
+perception and get the output action, in this case <TT>do(50)</TT>.
+
+<P>
+<PRE>
+public class SimpleJasonAgent extends AgArch {
+    public static void main(String[] a) {
+       ...
+       SimpleJasonAgent ag = new SimpleJasonAgent();
+       ag.run();
+    }
+
+    public SimpleJasonAgent() {
+         // set up the Jason agent and the 
+         // TransitionSystem (the BDI Engine where the AgentSpeak 
+         // Semantics is implemented)
+
+         Agent ag = new Agent();
+         new TransitionSystem(ag, new Circumstance(), new Settings(), this);
+         ag.initAg("demo.asl"); // demo.asl is the file containing the code of the agent
+    }
+    
+    public String getAgName() {
+        return "bob";
+    }
+
+    public void run() {
+        while (isRunning()) {
+          // calls the Jason engine to perform one reasoning cycle
+          getTS().reasoningCycle();
+        }
+    }
+
+    // this method just add some perception for the agent
+    public List&lt;Literal&gt; perceive() {
+        List&lt;Literal&gt; l = new ArrayList&lt;Literal&gt;();
+        l.add(Literal.parseLiteral("x(10)"));
+        return l;
+    }
+
+    // this method gets the agent actions
+    public void act(ActionExec action, List&lt;ActionExec&gt; feedback) {
+        getTS().getLogger().info("Agent " + getAgName() + 
+                             " is doing: " + action.getActionTerm());
+        // return confirming the action execution was OK
+        action.setResult(true);
+        feedback.add(action);
+    }
+
+    public boolean canSleep() {
+        return true;
+    }
+
+    public boolean isRunning() {
+        return true;
+    }
+
+    public void sleep() {
+    	try {   Thread.sleep(1000); } catch (InterruptedException e) {}
+    }
+    
+    public void sendMsg(jason.asSemantics.Message m) throws Exception {
+    }
+
+    public void broadcast(jason.asSemantics.Message m) throws Exception {
+    }
+
+    public void checkMail() {
+    }
+}
+</PRE>
+
+<P>
+To run this agent:
+<PRE>
+export CLASSPATH= ../../lib/jason.jar:.
+javac SimpleJasonAgent.java
+java  SimpleJasonAgent
+</PRE>
+
+<P>
+The output will be 
+<PRE>
+[bob] Agent bob is doing: do(50)
+</PRE>
+
+<P>
+Of course, the AgentSpeak code in this example cannot use communicative
+actions, since the specific architecture given above does not implement
+communication.
+
+<P>
+
+<H1><A NAME="SECTION00060000000000000000">
+5 Debug tools</A>
+</H1>
+
+<P>
+
+<H2><A NAME="SECTION00061000000000000000">
+5.1 How to setup verbosity of an agent?</A>
+</H2>
+
+<P>
+The verbosity is set in the options defined for the agent in the project file. For instance
+
+<P>
+<PRE>
+   ... 
+   agents: ag1 [verbose=2];
+   ...
+</PRE>
+
+<P>
+A number between 0 and 2 should be specified. The higher the number,
+the more information about that agent is printed out in the Jason
+console. The default is in fact 1, not 0; verbose 1 prints out only
+the actions that agents perform in the environment and the messages
+exchanged between them. Verbose 2 is for debugging (it corresponds to
+the java log level FINE).
+
+<P>
+
+<H2><A NAME="SECTION00062000000000000000">
+5.2 How to log the overall execution?</A>
+</H2>
+
+<P>
+<A HREF="http://jason.sf.net"><I>Jason</I></A> uses the <A HREF="http://java.sun.com/j2se/1.5.0/docs/guide/logging/overview.html">Java logging
+  API</A>
+to output messages into the console (the default console is called
+MASConsole). To change the log level or device, select the menu
+``Plugins -&gt; Jason -&gt; Edit Log properties''. The default configuration
+file has comments that helps you customise your log. For instance,
+to output messages both into an XML file and in the console, you only
+need to set the log handler as in the following line:
+<PRE>
+handlers = java.util.logging.FileHandler, java.util.logging.ConsoleHandler
+</PRE>
+To get only console output (without the MASConsole GUI):
+<PRE>
+handlers = java.util.logging.ConsoleHandler
+</PRE>
+
+<P>
+
+<H2><A NAME="SECTION00063000000000000000">
+5.3 How to log agents' mind states?</A>
+</H2>
+
+<P>
+Besides running the system in debug mode, we can define options for an
+agent such that the current state of its mind is shown or stored in
+files.
+
+<P>
+To show the current mind state in the screen, add the following option
+in the project:
+<PRE>
+agents:
+       bob [mindinspector="gui(cycle,html)"];
+</PRE>
+
+<P>
+In this case the screen is updated each reasoning cycle. If you want
+to store all the states in a kind of ``history'', add a third argument
+as in the example below.
+
+<P>
+<PRE>
+      bob [mindinspector="gui(cycle,html,history)"];
+</PRE>
+
+<P>
+In the place of ``cycle'', you can write the refresh interval in
+mili-seconds:
+
+<P>
+<PRE>
+      bob [mindinspector="gui(2000,html,history)"];
+</PRE>
+
+<P>
+To store the history of minds in files, use the following configuration:
+<PRE>
+      bob [mindinspector="file(cycle,xml,log)"];
+</PRE>
+The last parameter is the name of the directory where files will be
+stored. Each file corresponds to a sample of the mind. They are XML
+files with suitable style sheets to be viewed in browsers.
+
+<P>
+
+<H1><A NAME="SECTION00070000000000000000">
+6 </A><A HREF="http://jason.sf.net"><I>Jason</I></A> Infrastructures
+</H1>
+
+<P>
+
+<H2><A NAME="SECTION00071000000000000000">
+6.1 What are infrastructures for?</A>
+</H2>
+
+<P>
+An infrastructure provides the following services for the MAS:
+
+<UL>
+<LI>communication (e.g., the centralised infrastructure implements
+  communication based on KQML whilst <A HREF="http://jade.tilab.com/">J<SMALL>ADE</SMALL></A> implements it using
+  FIPA-ACL),
+</LI>
+<LI>control of the agent life cycle (creation, running,
+  destruction).
+</LI>
+</UL>
+
+<P>
+
+<H2><A NAME="SECTION00072000000000000000">
+6.2 Which infrastructures are available?</A>
+</H2>
+
+<P>
+The current distribution of <A HREF="http://jason.sf.net"><I>Jason</I></A> has the following infrastructures:
+<DL>
+<DT><STRONG>Centralised:</STRONG></DT>
+<DD>this infrastructure runs all agents in the
+  same host. It provides fast startup and high performance for systems
+  that can be executed in a single computer. It is also useful to test
+  and develop (prototype) systems. Centralised is the default infrastructure.
+
+<P>
+</DD>
+<DT><STRONG>Jade:</STRONG></DT>
+<DD>provides distribution and communication using 
+
+  <a href="http://jade.tilab.com/">Jade</a>,
+  which is based on
+  FIPA-ACL. With this infrastructure, all tools available with <A HREF="http://jade.tilab.com/">J<SMALL>ADE</SMALL></A> 
+  (e.g., Sniffer and Inspector) are also available to monitor and
+  inspect <A HREF="http://jason.sf.net"><I>Jason</I></A> agents.
+
+<P>
+Since <A HREF="http://jason.sf.net"><I>Jason</I></A> agents use KQML and <A HREF="http://jade.tilab.com/">J<SMALL>ADE</SMALL></A> uses FIPA-ACL, we opted
+  to translate the messages from KQML to FIPA-ACL and vice-versa to
+  maintain the AgentSpeak programming the same for all
+  infrastructures. The following table summarises the translation of the
+  basic performatives:
+  <DIV ALIGN="CENTER">
+<TABLE CELLPADDING=3 BORDER="1">
+<TR><TD ALIGN="LEFT">FIPA-ACL</TD>
+<TD ALIGN="LEFT">KQML</TD>
+</TR>
+<TR><TD ALIGN="LEFT">inform</TD>
+<TD ALIGN="LEFT">tell</TD>
+</TR>
+<TR><TD ALIGN="LEFT">query-ref</TD>
+<TD ALIGN="LEFT">askOne</TD>
+</TR>
+<TR><TD ALIGN="LEFT">request</TD>
+<TD ALIGN="LEFT">achieve</TD>
+</TR>
+</TABLE>
+</DIV>
+
+<P>
+You can find more information about this infrastructure in the
+  <A HREF="http://jason.sourceforge.net/mini-tutorial/jason-jade/index.html">Jason-JADE mini-tutorial</A>.
+
+<P>
+</DD>
+</DL>
+<H2><A NAME="SECTION00073000000000000000">
+6.3 How to select an infrastructure?</A>
+</H2>
+
+<P>
+In the <TT>.mas2j</TT> project file, use the `<I>infrastructure</I>'
+entry to select an infrastructure, for example to use Centralised:
+<PRE>
+MAS auction {
+    infrastructure: Centralised
+    agents: ag1; ag2; ag3; 
+}
+</PRE>
+and to use Jade:
+<PRE>
+MAS auction {
+    infrastructure: Jade
+    agents: ag1; ag2; ag3; 
+}
+</PRE>
+
+<P>
+Note that the agents do not need to be changed for different
+infrastructures. The <A HREF="http://jason.sf.net"><I>Jason</I></A> Agent Architecture binds them to the
+available infrastructure.
+
+<P>
+
+<H2><A NAME="SECTION00074000000000000000">&#160;</A><A NAME="sec:whyjade">&#160;</A>
+<BR>
+6.4 When should I use the <A HREF="http://jade.tilab.com/">J<SMALL>ADE</SMALL></A> infrastructures?
+</H2>
+
+<P>
+The centralised infrastructure does not support:
+
+<UL>
+<LI>execution of the agents at distributed hosts, and
+</LI>
+<LI>interoperability with non-<A HREF="http://jason.sf.net"><I>Jason</I></A> agents.
+</LI>
+</UL>
+
+<P>
+If you need any of these features, you should choose the <A HREF="http://jade.tilab.com/">J<SMALL>ADE</SMALL></A> 
+infrastructure (or implement/plug a new infrastructure for/into
+<A HREF="http://jason.sf.net"><I>Jason</I></A> yourself).  The interoperability with non-<A HREF="http://jason.sf.net"><I>Jason</I></A> agents is
+achieved by <A HREF="http://jade.tilab.com/">J<SMALL>ADE</SMALL></A> through FIPA-ACL communication. 
+
+<P>
+
+<H1><A NAME="SECTION00080000000000000000">
+7 </A><A HREF="http://jade.tilab.com/">J<SMALL>ADE</SMALL></A> 
+</H1>
+
+<P>
+
+<H2><A NAME="SECTION00081000000000000000">
+7.1 How to customise the </A><A HREF="http://jade.tilab.com/">J<SMALL>ADE</SMALL></A> container?
+</H2>
+
+<P>
+All parameters normally used to start a <A HREF="http://jade.tilab.com/">J<SMALL>ADE</SMALL></A> container can be set in
+the menu Plugins -&gt; Plugins Options -&gt; Jason -&gt; jade.Boot
+arguments. For instance, to start a non-main container when running
+the project, the following arguments can be used (supposing the main
+container is running at x.com):
+<PRE>
+-gui -container -host x.com
+</PRE>
+
+<P>
+
+<H2><A NAME="SECTION00082000000000000000">
+7.2 How to start a </A><A HREF="http://jason.sf.net"><I>Jason</I></A> agent with <TT>jade.Boot</TT>?
+</H2>
+
+<P>
+The <A HREF="http://jade.tilab.com/">J<SMALL>ADE</SMALL></A> agent wrapper should be used to start a <A HREF="http://jason.sf.net"><I>Jason</I></A> agent using
+<TT>jade.Boot</TT>, rather than doing it from the <A HREF="http://jason.sf.net"><I>Jason</I></A> IDE. For
+example, to start a <A HREF="http://jason.sf.net"><I>Jason</I></A> agent called `bob' based on the AgentSpeak
+source code in file <TT>auctioneer.asl</TT>, execute the following
+command in a shell:
+<PRE>
+java jade.Boot "bob:jason.infra.jade.JadeAgArch(auctionner.asl)"
+</PRE>
+
+<P>
+To start up also a simulated environment
+(implemented, for instance, in the <TT>Env</TT> class):
+
+<P>
+<PRE>
+java jade.Boot -agents "\
+ environment:jason.infra.jade.JadeEnvironment(Env) \
+ bob:jason.infra.jade.JadeAgArch(auctionner.asl)"
+</PRE>
+
+<P>
+The arguments for the environment have to follow the class name, for example:
+<PRE>
+java jade.Boot -agents "environment:jason.infra.jade.JadeEnvironment(Env,arg1,arg2)"
+</PRE>
+
+<P>
+In the case you need to start a more customised agent (architecture,
+belief base, ...), you can write (or reuse) a <A HREF="http://jason.sf.net"><I>Jason</I></A> project file with all the
+usual agent's parameters and then start the agent from this file. E.g.
+<PRE>
+jade.Boot -agents "bob:jason.infra.jade.JadeAgArch(j-project,test.mas2j,bob)"
+</PRE>
+The parameter <TT>j-project</TT> indicates that the following
+parameter (<TT>test.mas2j</TT> in the above example) is the <A HREF="http://jason.sf.net"><I>Jason</I></A> 
+project. The third parameter is the name of the agent as defined in
+the .mas2j file. 
+
+<P>
+The same approach can be used for the environment:
+<PRE>
+jade.Boot -agents "j_environment:jason.infra.jade.JadeEnvironment(j-project,test.mas2j)"
+</PRE>
+
+<P>
+
+<H2><A NAME="SECTION00083000000000000000">
+7.3 How can I customise the Jade sniffer?</A>
+</H2>
+
+<P>
+In the project directory, create a file called
+<TT>c-sniffer.properties</TT> with your preferences (see
+<TT><A NAME="tex2html1"
+  HREF="http://www.cs.uta.fi/kurssit/AgO/harj/jade_harkat/doc/tools/sniffer/html/jdoc/jade/tools/sniffer/Sniffer.html">http://www.cs.uta.fi/kurssit/AgO/harj/jade_harkat/doc/tools/sniffer/html/jdoc/jade/tools/sniffer/Sniffer.html</A></TT> for more details). Once started, Jason will copy this file to
+<TT>sniffer.properties</TT> to be used by the Jade's sniffer. If no
+customisation is provided, Jason creates a default properties file
+with the names of the agents.
+
+<P>
+
+<H2><A NAME="SECTION00084000000000000000">
+7.4 How to run my agents on several machines with </A><A HREF="http://jade.tilab.com/">J<SMALL>ADE</SMALL></A>?
+</H2>
+
+<P>
+The 'play' button of jEdit plugin always run all the agents in the
+current host even using JADE infrastructure. To run them on several
+machines there are two mechanisms.
+
+<P>
+
+<H3><A NAME="SECTION00084100000000000000">
+7.4.1 Defining a container for each agent</A>
+</H3>
+
+<P>
+In the project file, you have to setup the host's name where the main
+container will run and the container where agents will run, as in
+the following example (this example is available in the demos
+directory):
+<PRE>
+MAS demo_distributed_jade {
+
+    infrastructure: Jade(main_container_host("localhost")) 
+	// replace localhost by the name or IP of the host where the main container will run
+
+    agents:
+        a at "c1";    // agent a will run on the hots where container c1 will run
+        b at "c1";    // agent b will run on the host where container c1 will run
+        c at "c2" #3; // ....
+        d at "c1";
+}
+</PRE>
+
+<P>
+Steps to run the system:
+
+<OL>
+<LI>Create the Ant script to run the agents by either pressing play in
+  the jEdit plugin or typing
+<PRE>
+   $ cd &lt;your project directory&gt;
+   $ &lt;jason dir&gt;/bin/mas2j.sh &lt;the .mas2j file&gt;
+</PRE>
+
+<P>
+The script has the task <TT>Main-Container</TT> to run the JADE main
+  container and tasks to start each container defined in the
+  project (<TT>c1</TT> and <TT>c2</TT>, in the example above).
+
+<P>
+</LI>
+<LI>Go to host X and run the main container there by starting the
+  main container task of the script:
+<PRE>
+   $ cd bin
+   $ ant Main-Container
+</PRE>
+
+<P>
+</LI>
+<LI>Go to host Y and start container c1 there
+<PRE>
+   $ ant c1
+</PRE>
+
+<P>
+</LI>
+<LI>Go to host Z and start container c2 there
+<PRE>
+   $ ant c2
+</PRE>
+</LI>
+</OL>
+
+<P>
+
+<H3><A NAME="SECTION00084200000000000000">
+7.4.2 Defining a class that allocates the agents to containers</A>
+</H3>
+
+<P>
+In the second mechanism the <TT>at</TT> primitive of the project isn't
+used, in its place a Java class is provided to indicate which
+containers have to be created and how agents are distributed on to them.
+The project definition is thus like the following
+(<TT>myAllocator</TT> is the name of the Java class and
+<TT>[c1,c2]</TT> is the list of containers).
+<PRE>
+MAS demo_distributed_jade {
+
+    infrastructure: Jade(
+        main_container_host("localhost"),    // replace localhost by the name or IP of the host where the main container will run
+        container_allocation("myAllocator",  // the name of the class that will allocate the agents to containers
+                             "[c1,c2]")      // the name and number of containers
+    ) 
+	
+
+    agents:
+        a; 
+        b;   
+        c #3; 
+        d #5;
+}
+</PRE>
+
+<P>
+In the above example (available in the demos/distributed-jade/case2
+directory), the class <TT>myAllocator</TT> allocates the same number
+of agents to each container. You can see the code of this class for
+details.
+
+<P>
+To run this system, replace the commands of step 1 of the previous
+section as follows (the other steps remain the same).
+
+<P>
+For Unix:
+<PRE>
+   $ cd &lt;your project directory&gt;
+   $ ant -f bin/build.xml compile
+   $ &lt;jason dir&gt;/bin/mas2j.sh &lt;the .mas2j file&gt;
+</PRE>
+
+<P>
+For Windows and other plaforms:
+<PRE>
+   &gt; cd &lt;your project directory&gt;
+   &gt; ant -f bin/build.xml compile
+   &gt; set JASONLIB=&lt;the Jason lib directory&gt;
+   &gt; java -classpath bin\classes;%JASONLIB%\jason.jar jason.mas2j.parser.mas2j  &lt;the .mas2j file&gt;
+</PRE>
+
+<P>
+
+<H1><A NAME="SECTION00090000000000000000">
+8 AgentSpeak Language</A>
+</H1>
+
+<P>
+Thanks to Mehdi Dastani for these questions.
+
+<P>
+
+<H2><A NAME="SECTION00091000000000000000">
+8.1 What exactly are the cases where negative events of the forms
+  "-!p" and "-?p" are generated?</A>
+</H2>
+
+<P>
+A test goal "?p" in the body of a plan first checks the belief base,
+and if it fails, it still tries to generate an internal event
+"+?p". This is because the test goal might have been meant to be a
+more sophisticated query for which the programmer created a whole plan
+with "+?p" as triggering event, then that plan could be executed to
+satisfy the test goal. Events "-!p" and "-?p" are only generated if an
+executing plan for "+!g" and "+?g" (respectively) fail. Here's what
+the manual says about this:
+
+<P>
+<BLOCKQUOTE>
+Events for handling plan failure are already available in Jason,
+  although they are not formalised in the semantics yet. If an action
+  fails or there is no applicable plan for a subgoal in the plan being
+  executed to handle an internal event with a goal addition "+!g",
+  then the whole failed plan is removed from the top of the intention
+  and an internal event for "-!g" associated with that same intention
+  is generated. If the programmer provided a plan that has a
+  triggering event matching "-!g" and is applicable, such plan will be
+  pushed on top of the intention, so the programmer can specify in the
+  body of such plan how that particular failure is to be handled. If
+  no such plan is available, the whole intention is discarded and a
+  warning is printed out to the console. Effectively, this provides a
+  means for programmers to "clean up" after a failed plan and before
+  "backtracking" (that is, to make up for actions that had already
+  been executed but left things in an inappropriate state for next
+  attempts to achieve the goal). For example, for an agent that
+  persist on a goal "!g" for as long as there are applicable plans for
+  "+!g", suffices it to include a plan "-g! : true &lt;- true." in the
+  plan library. Note that the body can be empty as a goal is only
+  removed from the body of a plan when the intended means chosen for
+  that goal finishes successfully. It is also simple to specify a plan
+  which, under specific condition, chooses to drop the intention
+  altogether (by means of a standard internal action mentioned below).
+
+</BLOCKQUOTE>
+
+<P>
+
+<H2><A NAME="SECTION00092000000000000000">
+8.2 Does "+p" (or "-p") in a plan body cause two effects,
+  i.e. updating the belief base and generating the events "+p" (or "-p")?</A>
+</H2>
+
+<P>
+Yes, it causes both effects. Note, importantly, that one of the
+interpreter configuration options allow the user to choose whether the
+event (<B>if</B> it is by chance relevant to any plans the agent
+has) will be treated as internal (pushed on top of that same
+intention) or external (a new intention - i.e., a new "focus of
+attention" - is created).
+
+<P>
+
+<H2><A NAME="SECTION00093000000000000000">
+8.3 Does "?p" in a plan body cause two effects, i.e. testing p
+from the belief base and generating the events "+?p"? Is "-?p"
+  generated when a test goal "?p" fails? When does the test goal
+  "?p" fail?</A>
+</H2>
+
+<P>
+When "?p" is executed, first the interpreter tries a simple query to
+the belief base. If that doesn't succeed, before failing the
+intention, first an internal event for "+?g" is generated, if there
+are no applicable plans for such event, then the plan fails (fails
+"normally", i.e., for the "no applicable plans" reason) -- there
+could be still a "-?g" plan to be tried; if there's none, the
+intention is discarded and a message printed to the console to let the
+user know.
+
+<P>
+
+<H2><A NAME="SECTION00094000000000000000">
+8.4 It is claimed that open-world assumption is available. What
+does this mean? Do we have a three-valued logic?</A>
+</H2>
+
+<P>
+No, we don't use three-valued logic, strictly speaking. There is a
+"strong negation" operator "<TT><A NAME="tex2html2"
+  HREF="~">~</A></TT>". When assuming open world, the
+user models the environment with a set of propositions known to be
+explicitly true and a set of propositions known to be explicitly false
+of the environment at a certain moment in time (the latter are
+literals preceeded by the <TT><A NAME="tex2html3"
+  HREF="~">~</A></TT> operator).  Of course, there is
+still default negation (as usual in logic programming languages), so
+you can say, in the context of a plan, "not p(t) &amp; not <TT><A NAME="tex2html4"
+  HREF="~">~</A></TT>p(t)"
+to check if the agent is uncertain about "p(t)". Note that it's
+completely up to the user to prevent paraconsistency (or to use it, if
+they so wish). You could add internal beliefs (or have beliefs from
+perception of the environment) that p(t) is true and that&nbsp;p(t) is
+also true: <A HREF="http://jason.sf.net"><I>Jason</I></A> won't do consistency checks for you! But you can
+easily implement such consistency check, or indeed have more elaborate
+belief revisions algorithms by overriding the belief update and belief
+revision methods in Jason (the belief revision method by default does
+nothing). Finally, note that strong negation can also appear in the
+triggering events, plan body, and anywhere a literal can appear.
+
+<P>
+
+<H2><A NAME="SECTION00095000000000000000">
+8.5 What's the difference between ! and !!?</A>
+</H2>
+
+<P>
+The difference between ! and !! is that the latter causes the goal to
+be pursued as a separate intention. Within the body of a plan in one
+intention, if you have "!g1; !g2" the agent will attempt to achieve g2
+only after achieving (or finishing executing a plan for) g1.  If you
+say "!!g1; !g2" the agent will then have another separate intention to
+achieve g1 and can immediately start attempting to achieve g2. What
+will be done first (executing a bit of the intention with g1 or the
+old intention with g2) will depend on the choices that the intention
+selection function makes. 
+
+<P>
+You may have noticed !! is often used at the end of recursive plans
+(when the recursive call does not have free variables to be
+instantiated) as in the following code:
+<PRE>
++!g : end_recursion_context.
++!g : true &lt;- action1; !!g.
+</PRE>
+In this case, the !! is used to avoid Jason creating long stacks of
+(empty) plans, so the operator just allows Jason to process the
+recursion more efficiently.
+
+<P>
+
+<H2><A NAME="SECTION00096000000000000000">
+8.6 Why is </A><A HREF="http://jason.sf.net"><I>Jason</I></A>'s plan failure mechanism different from
+  other agent platforms?
+</H2>
+
+<P>
+Some other platforms handle plan failure in the following way. When a
+plan is selected as an intended means to achieve a goal (more
+generally, to handle an event), other applicable plans might be
+available or indeed other instantiations of the plan's variables (to
+make the context a logical consequence of the belief base) might be
+possible. Those platforms then make a "note" of all those plans and
+plan instantiations. If the plan currently being executed fails,
+another plan is chosen from that set of plans initially recorded as
+alternative plans for handling that event. This has the great
+advantage that the platform does not have to check for applicable
+plans again, and has as disadvantage the fact that possibly the
+agent's beliefs have changed and so plans considered applicable at the
+time the first plan was selected, are actually no longer applicable
+(yet they will be attempted, which increases the chances of the chosen
+alternative plan failing as well).
+
+<P>
+In <A HREF="http://jason.sf.net"><I>Jason</I></A>, we opted for a different approach. When a plan with a
+triggering event "<TT>+!g</TT>" fails, we generate an event
+"<TT>-!g</TT>" and if the programmer provided a plan for that event,
+and that plan is currently applicable, that plan is pushed on top of the
+intention where the failed plan is. In the general case, the
+programmer will have included in that "<TT>-!g</TT>" plan another
+attempt to achieve "<TT>g</TT>". When this happens, all relevant plans
+will be checked again to find the set of <I>currently</I> applicable
+plans. Under the assumption that the contexts have been well defined
+by the programmer, only plans that now stand a chance of succeeding
+will be applicable. Differently from the above mechanism, here we have
+the advantage of being better updated on the set of actually
+applicable plans, but might be less efficient in that more checks need
+to be done.
+
+<P>
+Another disadvantage of this approach is that to make sure a plan will
+only be tried once (if in a particular application this is important,
+although this is not always the case, surely), as it happens in other
+platforms, the user will have to use, e.g., the belief base to keep
+track of the previously attempted plans, or else to have the
+applicable plan selection function checking the failed plans in the
+stack of plans forming that intention (note that the failed plans are
+still there and will only be removed, without executing further, when
+the respective plan for "<TT>-!g</TT>" finishes) to decide which ones
+not to use anymore. Off course the latter requires considerable Java
+programming). For the first alternative, there is work on ``plan
+patterns'' and pre-processing directives which take care of automating
+this for the programmer.
+
+<P>
+On the other hand, there is an extra advantage of the use of the
+<A HREF="http://jason.sf.net"><I>Jason</I></A> plan failure handling mechanism. Pure "backtracking" as used in
+logic programming might not always make sense in an agent program.
+Recall that besides "sub-goals", plan bodies have <I>actions</I>.
+These actions, by definition, change something that is outside the
+agent itself (i.e., the environment), so they cannot automatically be
+"undone" by the interpreter in the process of backtracking. It is
+therefore possible that none of the plans originally written (with a
+particular set of initial situations in mind) to achieve the goal will
+be applicable anymore. At least in some cases, it might be sensible to
+let the "<TT>-!g</TT>" plan perform the necessary actions to bring the
+environment back to a "reasonable" state in which the original plans
+to achieve the goal can then be used again, rather than writing more
+alternative plans for the original goal considering all possible
+situations in which the agent can find itself when attempting to
+achieve the goal.
+
+<P>
+
+<H2><A NAME="SECTION00097000000000000000">
+8.7 Which information is available to failure handling plans ?</A>
+</H2>
+
+<P>
+When a plan fails, the plan that handles the corresponding event (that
+has the form of <TT>-!g</TT>) may use failure information to provide a
+suitable solution. This information is provided by two means:
+<DL>
+<DT><STRONG>Internal actions:</STRONG></DT>
+<DD>the internal action
+  <TT>.current_intention(I)</TT> unifies <TT>I</TT> with a
+  representation of the stack of the current intention. By inspecting
+  this stack, the context of the failure can be discovered.
+
+<P>
+It follows an example of <TT>I</TT> (provided by the execution of the
+  example available in <TT>demos/failure</TT>):
+<PRE>
+intention(1,
+  [
+   im(l__6[source(self)], { .current_intention(I); ... },  [map(I,...),...]),
+   im(l__5[source(self)], { .fail },                       []),
+   im(l__4[source(self)], { !g5(X); .print(endg4) },       [map(X,failure)]),
+   im(l__3[source(self)], { !g4(X); .print(endg3) },       [map(X,failure)]),
+   im(l__2[source(self)], { !g3(X); .print(endg2) },       [map(X,failure)]),
+   im(l__1[source(self)], { !g2(X); .print(endg1) },       [map(X,failure)]),
+   im(l__0[source(self)], { !g1(X); .print("End, X=",X) }, [map(X,failure)])
+  ]
+)
+</PRE>
+
+<P>
+You can find more information in the documentation of the
+  <A HREF="http://jason.sourceforge.net/api/jason/stdlib/current_intention.html">current_intention</A>
+  pre-defined internal action.
+
+<P>
+</DD>
+<DT><STRONG>Annotations:</STRONG></DT>
+<DD>every failure event is annotated with at least the
+  following information:
+  
+<UL>
+<LI><TT>error(&lt;atom: error id&gt;)</TT>: the identification of the type of
+    failure; values used by are:
+    
+<UL>
+<LI><TT>no_applicable</TT>: failure caused by no applicable plan;
+</LI>
+<LI><TT>no_relevant</TT>: failure caused by no relevant plan;
+</LI>
+<LI><TT>no_option</TT>: failure caused by no option being selected by
+      the selectOption function;
+</LI>
+<LI><TT>constraint_failed</TT>: failure caused by a constraint in the
+      plan that was not satisfied;
+</LI>
+<LI><TT>ia_failed</TT>: failure caused by an error in an internal
+      action (it throws an exception or returned false);
+</LI>
+<LI><TT>action_failed</TT>: the failure was caused by a failure
+      in the execution of an action in the environment (i.e., the
+      action execution returned "false");
+</LI>
+<LI><TT>ask_failed</TT>: the failure is caused by the lack of response
+      to an ask message (with deadline);
+</LI>
+<LI><TT>wrong_arguments</TT>: failure caused by wrong number or
+      type of arguments given to an internal action;
+</LI>
+<LI><TT>unknown</TT>: other causes;
+    
+</LI>
+</UL>
+
+<P>
+</LI>
+<LI><TT>error_msg(&lt;string&gt;)</TT>: the human readable message of the error
+</LI>
+<LI><TT>code(&lt;literal&gt;)</TT>: the plan body literal that failed;
+</LI>
+<LI><TT>code_src(&lt;string&gt;)</TT>: the file name with the source
+    code where the plan that failed is defined;
+</LI>
+<LI><TT>code_line(&lt;int&gt;)</TT>: the line number within that file.
+  
+</LI>
+</UL>
+
+<P>
+An example of failure event and its annotations:
+<PRE>
+-!g[error(ia_failed), 
+    error_msg("internal action .my_name failed"), 
+    code(".my_name(bob)"), 
+    code_src("/tmp/x.asl"), 
+    code_line(18)]
+</PRE>
+
+<P>
+Note that the plan that handles this event is not obliged to use any
+  these annotations, or it could make use of a subset of them, for
+  example:
+<PRE>
+-!g[error(ia_failed)]       &lt;- ... plan to handle error of type \ia_failed' ....
+-!g[error(no_applicable)]   &lt;- ... plan to handle error of type 'no_applicable'
+-!g[code_src("/tmp/x.asl")] &lt;- ... plan to handle error in plans of file x.asl
+</PRE>
+
+<P>
+The internal actions defined by the user can add new annotations to
+  indicate particular types of errors (see the API documentation of
+  <A HREF="http://jason.sourceforge.net/api/jason/JasonException.html">JasonException</A>
+  for more information about that).
+</DD>
+</DL>
+
+<P>
+
+<H1><A NAME="SECTION000100000000000000000">
+9 Developing Jason</A>
+</H1>
+
+<P>
+
+<H2><A NAME="SECTION000101000000000000000">
+9.1 How to build </A><A HREF="http://jason.sf.net"><I>Jason</I></A> from SourceForge SVN (subversion)?
+</H2>
+
+<P>
+The SVN repository maintains the latest version of the <A HREF="http://jason.sf.net"><I>Jason</I></A>'s
+sources, so you will eventually need to build <A HREF="http://jason.sf.net"><I>Jason</I></A> from the SVN. To
+do this the following software is required:
+
+<UL>
+<LI>a SVN client program and
+</LI>
+<LI><A HREF="http://ant.apache.org/">Ant</A> version &gt;= 1.6.2.
+</LI>
+</UL>
+
+<P>
+The steps to build Jason are:
+
+<OL>
+<LI>download the sources from SVN:
+<PRE>
+svn checkout svn://svn.code.sf.net/p/jason/svn/trunk jason-svn
+</PRE>
+
+<P>
+</LI>
+<LI>create the <TT>jason.jar</TT> file and the jEdit plugin:
+<PRE>
+ant clean
+ant jar
+ant plugin
+</PRE>
+
+<P>
+</LI>
+<LI>create the API documentation:
+<PRE>
+ant apidoc
+</PRE>
+
+<P>
+More information is available at 
+<A HREF="https://sourceforge.net/p/jason/svn/HEAD/tree/">SourceForge page</A>.
+
+<P>
+</LI>
+</OL>
+
+<P>
+
+<H2><A NAME="SECTION000102000000000000000">
+9.2 Do I have to use </A><A HREF="http://jason.sf.net"><I>Jason</I></A> with jEdit?
+</H2>
+
+<P>
+No, Jason is also available as a plugin to Eclipse, developed mostly
+by Germano Fronza; click
+<A HREF="http://jason.sourceforge.net/mini-tutorial/eclipse-plugin">here</A> for more information,
+including installation instructions.
+
+<P>
+A command line option is also available. To compile a project:
+<PRE>
+&lt;jason installation path&gt;/bin/mas2j.sh &lt;your project.mas2j&gt;
+</PRE>
+an Ant script is created in the <TT>bin</TT> directory. To run:
+<PRE>
+ant -f bin/build.xml
+</PRE>
+
+<P>
+
+<H2><A NAME="SECTION000103000000000000000">
+9.3 How to create an Eclipse project for </A><A HREF="http://jason.sf.net"><I>Jason</I></A>?
+</H2>
+
+<P>
+This might be useful if you are planning to contribute code for Jason
+itself.
+
+<P>
+
+<OL>
+<LI>Select new Java Project wizard in Eclipse.
+</LI>
+<LI>In "create project from existing source" select the directory where
+  is installed. [Next]
+</LI>
+<LI>Set <TT>"src"</TT> directory for the sources.
+</LI>
+<LI>Set <TT>"bin/classes"</TT> for "Default output folder".
+</LI>
+<LI>Add all jars in <TT>"lib"</TT> as "Libraries". [Finish]
+</LI>
+</OL>
+
+<P>
+<BR><HR>
+
+</BODY>
+</HTML>

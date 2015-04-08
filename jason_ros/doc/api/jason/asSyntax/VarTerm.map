@@ -1,0 +1,12 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./VarTerm.html" title="jason.asSyntax.VarTerm" alt="" coords="157,118,225,143"/>
+<area shape="rect" id="node1" href="./VarTerm.html" title="&lt;TABLE&gt;" alt="" coords="146,107,235,155"/>
+<area shape="rect" id="node2_1" href="./UnnamedVar.html" title="jason.asSyntax.UnnamedVar" alt="" coords="143,214,239,239"/>
+<area shape="rect" id="node2" href="./UnnamedVar.html" title="&lt;TABLE&gt;" alt="" coords="132,203,249,251"/>
+<area shape="rect" id="node3_2" href="./NumberTerm.html" title="jason.asSyntax.NumberTerm" alt="" coords="15,11,107,53"/>
+<area shape="rect" id="node3" href="./NumberTerm.html" title="&lt;TABLE&gt;" alt="" coords="5,6,118,58"/>
+<area shape="rect" id="node4_3" href="./LiteralImpl.html" title="jason.asSyntax.LiteralImpl" alt="" coords="153,19,229,45"/>
+<area shape="rect" id="node4" href="./LiteralImpl.html" title="&lt;TABLE&gt;" alt="" coords="142,8,239,56"/>
+<area shape="rect" id="node5_4" href="./ListTerm.html" title="jason.asSyntax.ListTerm" alt="" coords="275,11,357,53"/>
+<area shape="rect" id="node5" href="./ListTerm.html" title="&lt;TABLE&gt;" alt="" coords="264,6,368,58"/>
+</map>

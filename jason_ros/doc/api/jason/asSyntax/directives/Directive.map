@@ -1,0 +1,24 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./Include.html" title="jason.asSyntax.directives.Include" alt="" coords="15,121,75,146"/>
+<area shape="rect" id="node1" href="./Include.html" title="&lt;TABLE&gt;" alt="" coords="5,109,86,157"/>
+<area shape="rect" id="node2_1" href="./FunctionRegister.html" title="jason.asSyntax.directives.FunctionRegister" alt="" coords="121,121,234,146"/>
+<area shape="rect" id="node2" href="./FunctionRegister.html" title="&lt;TABLE&gt;" alt="" coords="110,109,245,157"/>
+<area shape="rect" id="node3_2" href="./Directive.html" title="jason.asSyntax.directives.Directive" alt="" coords="915,11,997,53"/>
+<area shape="rect" id="node3" href="./Directive.html" title="&lt;TABLE&gt;" alt="" coords="904,6,1008,58"/>
+<area shape="rect" id="node4_3" href="../patterns/goal/SMC.html" title="jason.asSyntax.patterns.goal.SMC" alt="" coords="279,113,467,154"/>
+<area shape="rect" id="node4" href="../patterns/goal/SMC.html" title="&lt;TABLE&gt;" alt="" coords="269,107,478,159"/>
+<area shape="rect" id="node5_4" href="../patterns/goal/SGA.html" title="jason.asSyntax.patterns.goal.SGA" alt="" coords="513,113,701,154"/>
+<area shape="rect" id="node5" href="../patterns/goal/SGA.html" title="&lt;TABLE&gt;" alt="" coords="502,107,711,159"/>
+<area shape="rect" id="node6_5" href="../patterns/goal/RC.html" title="jason.asSyntax.patterns.goal.RC" alt="" coords="746,113,934,154"/>
+<area shape="rect" id="node6" href="../patterns/goal/RC.html" title="&lt;TABLE&gt;" alt="" coords="735,107,945,159"/>
+<area shape="rect" id="node7_6" href="../patterns/goal/OMC.html" title="jason.asSyntax.patterns.goal.OMC" alt="" coords="979,113,1167,154"/>
+<area shape="rect" id="node7" href="../patterns/goal/OMC.html" title="&lt;TABLE&gt;" alt="" coords="969,107,1178,159"/>
+<area shape="rect" id="node8_7" href="../patterns/goal/MG.html" title="jason.asSyntax.patterns.goal.MG" alt="" coords="1213,113,1401,154"/>
+<area shape="rect" id="node8" href="../patterns/goal/MG.html" title="&lt;TABLE&gt;" alt="" coords="1202,107,1411,159"/>
+<area shape="rect" id="node9_8" href="../patterns/goal/EBDG.html" title="jason.asSyntax.patterns.goal.EBDG" alt="" coords="1446,113,1634,154"/>
+<area shape="rect" id="node9" href="../patterns/goal/EBDG.html" title="&lt;TABLE&gt;" alt="" coords="1435,107,1645,159"/>
+<area shape="rect" id="node10_9" href="../patterns/goal/DG.html" title="jason.asSyntax.patterns.goal.DG" alt="" coords="1679,113,1867,154"/>
+<area shape="rect" id="node10" href="../patterns/goal/DG.html" title="&lt;TABLE&gt;" alt="" coords="1669,107,1878,159"/>
+<area shape="rect" id="node11_10" href="../patterns/goal/BC.html" title="jason.asSyntax.patterns.goal.BC" alt="" coords="1913,113,2101,154"/>
+<area shape="rect" id="node11" href="../patterns/goal/BC.html" title="&lt;TABLE&gt;" alt="" coords="1902,107,2111,159"/>
+</map>

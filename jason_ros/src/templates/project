@@ -1,0 +1,11 @@
+/* Jason Project */
+
+MAS <PROJECT_NAME> {
+
+    infrastructure: <INFRA>
+
+    agents:
+
+    /* ROS agents must use RosAgArch as agent architecture */
+    /* robot agentArchClass RosAgArch;                     */
+}

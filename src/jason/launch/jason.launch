@@ -1,0 +1,3 @@
+<launch>
+    <node pkg="jason" type="start_jason.sh" name="start_jason" required="true"/>
+</launch>

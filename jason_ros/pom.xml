@@ -1,0 +1,40 @@
+<project>
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>net.sf.jason</groupId>
+  <artifactId>jason</artifactId>
+  <packaging>jar</packaging>
+  <name>Jason</name>
+  <version>1.3.10</version>
+  <description>Jason is a fully-fledged interpreter for an extended version of AgentSpeak, a BDI agent-oriented logic programming language, and is implemented in Java. Using JADE a multi-agent system can be distributed over a network effortlessly.</description>
+  <url>http://jason.sf.net</url>
+  <licenses>
+    <license>
+      <name>GNU Library or Lesser General Public License version 2.0 (LGPLv2)</name>
+      <url>http://www.gnu.org/licenses/gpl-2.0.html</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+  <scm>
+    <url>svn://svn.code.sf.net/p/jason/svn/trunk</url>
+    <connection>svn://svn.code.sf.net/p/jason/svn/trunk</connection>
+  </scm>
+  <developers>
+    <developer>
+      <id>Jomi</id>
+      <name>Jomi F.  Hubner</name>
+      <email>jomifred@gmail.com</email>
+    </developer>
+    <developer>
+      <id>Rafael</id>
+      <name>Rafael H. Bordini</name>
+      <email>rafael.h.bordini@gmail.com</email>
+    </developer>
+  </developers>
+  <dependencies>
+    <!-- Jade 4.0.1/Ant dependency>
+      <groupId>...</groupId>
+      <artifactId>...</artifactId>
+      <version>...</version>
+    </dependency-->
+  </dependencies>
+</project>

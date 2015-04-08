@@ -1,0 +1,484 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project basedir="." default="usage" name="Jason" xmlns:artifact="antlib:org.apache.maven.artifact.ant">
+
+    <property environment="env" />
+
+    <property name="jasonJar"     value="${basedir}/lib/jason.jar" />
+    <property name="jadeJar"      value="${basedir}/lib/jade.jar" />
+    <property name="jasonSJar"    value="${basedir}/lib/s-jason.jar" />
+
+    <property name="build.dir" value="${basedir}/bin/classes" />
+
+    <property name="dist.properties" value="${basedir}/bin/dist.properties" />
+    <property name="version" value="1" />
+    <property name="release" value="4.0a" />
+    <property name="distDir" value="${env.HOME}/tmp/x/Jason-${version}.${release}" />
+    <property name="distFile" value="${env.HOME}/Jason-${version}.${release}" />
+
+    <property name="jedit.install.dir" value="${basedir}/bin/jedit" />
+    <property name="plugin.jar.name" value="jason-jedit-plugin.jar" />
+
+    <!-- define Maven coordinates -->
+    <property name="groupId" value="net.sf.jason" />
+    <property name="artifactId" value="jason" />
+    <!-- define artifacts' name, which follows the convention of Maven -->
+    <property name="maven-jar"         value="${distDir}/../${artifactId}-${version}.${release}.jar" />
+    <property name="maven-javadoc-jar" value="${distDir}/../${artifactId}-${version}.${release}-javadoc.jar" />
+    <property name="maven-sources-jar" value="${distDir}/../${artifactId}-${version}.${release}-sources.jar" />
+    <!-- defined maven snapshots and staging repository id and url -->
+    <property name="maven-snapshots-repository-id" value="sonatype-nexus-snapshots" />
+    <property name="maven-snapshots-repository-url" value="https://oss.sonatype.org/content/repositories/snapshots/" />
+    <property name="maven-staging-repository-id" value="sonatype-nexus-staging" />
+    <property name="maven-staging-repository-url" value="https://oss.sonatype.org/service/local/staging/deploy/maven2/" />
+
+    <target name="usage">
+        <echo>
+TARGETS:
+    compile -- compiles the source files
+    jar     -- generates jason.jar
+    plugin  -- generates and configure jEdit plugin for Jason
+    test    -- runs jUnit tests
+    apidoc  -- generates javadoc
+    dist    -- genetares the distribution file
+    clean   -- cleans the project
+    run     -- runs Jason
+        </echo>
+    </target>
+
+    <path id="run.classpath">
+        <pathelement location="${jedit.install.dir}/jedit.jar" />
+        <pathelement location="${jadeJar}" />
+    </path>
+
+    <path id="project.classpath">
+        <path refid="run.classpath" />
+        <pathelement location="${basedir}/lib/junit.jar" />
+        <pathelement location="${basedir}/lib/ant-launcher.jar" />
+        <pathelement location="${basedir}/lib/ant.jar" />
+        <pathelement location="${basedir}/lib/cartago.jar" />
+        <pathelement location="${basedir}/lib/c4jason.jar" />
+        <pathelement location="${basedir}/lib/moise.jar" />
+        <pathelement location="${basedir}/lib/jacamo.jar" />
+        <pathelement location="${basedir}/lib/rosjason-0.1.0.jar" />
+        <pathelement location="${basedir}/lib/guava-12.0.jar" />
+        <pathelement location="${basedir}/demos/persistent-belief-base/lib/hsqldb.jar" />
+        <pathelement location="${basedir}/lib/jedit/ErrorList.jar" />
+        <pathelement location="${basedir}/lib/jedit/SideKick.jar" />
+        <pathelement location="${jasonJar}" />
+    </path>
+
+    <path id="test.classpath">
+        <path refid="project.classpath" />
+        <pathelement location="${build.dir}" />
+    </path>
+
+    <condition property="jedit-ok" value="ok">
+        <or>
+            <not>
+                <available  file="${basedir}/bin/jedit.tgz" />
+            </not>
+            <uptodate targetfile="${jedit.install.dir}" srcfile="${basedir}/bin/jedit.tgz" />
+        </or>
+    </condition>
+
+
+    <target name="untar-jedit" unless="jedit-ok">
+        <echo message="Uncompressing jEdit" />
+        <delete dir="${jedit.install.dir}" />
+        <untar compression="gzip" dest="${basedir}/bin" src="${basedir}/bin/jedit.tgz" />
+    </target>
+
+
+    <target name="init" depends="untar-jedit">
+        <mkdir dir="${build.dir}" />
+    </target>
+
+    
+    <condition property="parsers-ok" value="ok">
+        <and>
+            <uptodate property="parsers-ok" targetfile="${basedir}/src/jason/mas2j/parser/mas2j.java" srcfile="${basedir}/src/jason/mas2j/parser/MAS2JavaParser.jcc" />
+            <uptodate property="parsers-ok" targetfile="${basedir}/src/jason/asSyntax/parser/as2j.java" srcfile="${basedir}/src/jason/asSyntax/parser/AS2JavaParser.jcc" />
+            <uptodate property="parsers-ok" targetfile="${basedir}/doc/AS2JavaParser.html" srcfile="${basedir}/src/jason/asSyntax/parser/AS2JavaParser.jcc" />
+        </and>
+    </condition>
+
+    <target name="parsers" depends="init" unless="parsers-ok">
+        <delete failonerror="no">
+            <fileset dir="${basedir}/src/jason/mas2j/parser" includes="*.java" />
+            <fileset dir="${basedir}/src/jason/asSyntax/parser" includes="*.java" />
+        </delete>
+
+        <java dir="${basedir}/src/jason/mas2j/parser" classname="javacc" fork="yes">
+            <classpath location="${basedir}/lib/javacc.jar" />
+            <arg line="MAS2JavaParser.jcc" />
+        </java>
+
+        <java dir="${basedir}/src/jason/asSyntax/parser" classname="javacc" fork="yes">
+            <classpath location="${basedir}/lib/javacc.jar" />
+            <arg line="AS2JavaParser.jcc" />
+        </java>
+
+        <java dir="${basedir}/src/jason/mas2j/parser" classname="jjdoc" fork="yes">
+            <classpath location="${basedir}/lib/javacc.jar" />
+            <arg line="MAS2JavaParser.jcc" />
+        </java>
+        <move file="${basedir}/src/jason/mas2j/parser/MAS2JavaParser.html" todir="${basedir}/doc" />
+
+        <java dir="${basedir}/src/jason/asSyntax/parser" classname="jjdoc" fork="yes">
+            <classpath location="${basedir}/lib/javacc.jar" />
+            <arg line="AS2JavaParser.jcc" />
+        </java>
+        <move file="${basedir}/src/jason/asSyntax/parser/AS2JavaParser.html" todir="${basedir}/doc" />
+
+    </target>
+
+
+    <target name="compile" depends="init,parsers">
+        <javac srcdir="src" destdir="${build.dir}" debug="true" deprecation="true" optimize="true" nowarn="true" source="1.6" target="1.6" includeantruntime="false">
+            <classpath refid="project.classpath" />
+        </javac>
+    </target>
+
+
+    <target name="jar" depends="compile">
+        <propertyfile file="${dist.properties}">
+            <entry key="version" value="${version}" />
+            <entry key="release" value="${release}" />
+            <!-- entry default="0" key="build" operation="+" type="int" /-->
+            <entry key="build.date" type="date" value="now" />
+        </propertyfile>
+        <property file="${dist.properties}" />
+        <jar jarfile="${jasonJar}" >
+            <fileset dir="${build.dir}">
+                <include name="jason/**/*.class" />
+            </fileset>
+            <fileset dir="${basedir}/src">
+                <include name="images/**/*" />
+                <include name="asl/**/*" />
+                <include name="xml/**/*" />
+                <include name="templates/**/*" />
+                <include name="logging.properties" />
+            </fileset>
+            <fileset dir="${basedir}/bin">
+                <include name="dist.properties" />
+            </fileset>
+            <manifest>
+                  <attribute name="Main-Class" value="jason.util.ConfigGUI"/>
+            </manifest>
+        </jar>
+        <!-- copy file="${jasonJar}" todir="applications/jason-eclipse-plugin/lib" /-->
+    </target>
+
+    <target name="signjar" depends="jar">
+        <copy file="${jasonJar}" tofile="${jasonSJar}" />
+        <signjar jar="${jasonSJar}" alias="jason" storepass="rbjhja" keypass="rbjhja" keystore="${basedir}/src/jasonKeystore" />
+    </target>
+    
+    <target name="plugin" depends="compile, jar">
+        <jar jarfile="${jedit.install.dir}/jars/${plugin.jar.name}">
+            <fileset dir="${basedir}/src/jeditPlugin">
+                <include name="Jason.props" />
+                <include name="index.html" />
+                <include name="actions.xml" />
+                <include name="dockables.xml" />
+                <include name="services.xml" />
+                <include name="xmode.dtd" />
+            </fileset>
+            <fileset dir="${build.dir}">
+                <include name="jason/**/*.class" />
+            </fileset>
+            <fileset dir="${basedir}/src">
+                <include name="images/**/*" />
+                <include name="xml/**/*" />
+                <include name="templates/**/*" />
+                <include name="logging.properties" />
+            </fileset>
+            <fileset dir="${basedir}/bin">
+                <include name="dist.properties" />
+            </fileset>
+        </jar>
+        <copy todir="${jedit.install.dir}/modes">
+            <fileset dir="${basedir}/src/jeditPlugin">
+                <include name="agentSpeak.xml" />
+                <include name="jasonProject.xml" />
+                <include name="catalog" />
+            </fileset>
+        </copy>
+        <copy todir="${jedit.install.dir}/properties">
+            <fileset dir="${basedir}/src/jeditPlugin">
+                <include name="jedit-initial.props" />
+            </fileset>
+        </copy>
+        <copy todir="${jedit.install.dir}/jars">
+            <fileset dir="${basedir}/lib">
+                <include name="jacamo.jar" />
+            </fileset>
+        </copy>
+    </target>
+
+
+    <target name="run" depends="jar,plugin">
+        <java dir="bin" classname="org.gjt.sp.jedit.jEdit" fork="yes">
+            <classpath refid="run.classpath" />
+        </java>
+    </target>
+
+    <target name="test" depends="jar">
+        <junit printsummary="yes" failureProperty="test.failure">
+            <classpath refid="test.classpath" />
+            <formatter type="plain" usefile="false" />
+            <batchtest>
+                <fileset dir="${basedir}/src" includes="**/test/*Test.java" />
+            </batchtest>
+        </junit>
+        <fail message="test failed" if="test.failure" />
+        <delete failonerror="no" verbose="false">
+            <fileset dir="${basedir}" includes="bookstore.*" />
+        </delete>
+    </target>
+
+    <!-- apidoc related tasks- -->
+
+    <target name="apidoc" depends="compile,apidocsimple,apidocuml" />
+    
+    <condition property="dot-ok" value="true">
+        <or>
+            <available file="dot"     filepath="${env.PATH}" />
+            <available file="dot.exe" filepath="${env.PATH}" />
+        </or>
+    </condition>
+    <condition property="dot-nok" value="true">
+        <not>
+            <or>
+                <available file="dot"     filepath="${env.PATH}" />
+                <available file="dot.exe" filepath="${env.PATH}" />
+            </or>
+        </not>
+    </condition>
+    
+    <target name="apidocsimple" unless="dot-ok">  <!--   -->
+        <javadoc 
+            destdir="${basedir}/doc/api" 
+            packagenames="jason.*" 
+            sourcepath="${basedir}/src" 
+            excludepackagenames="jason.asSyntax.parser,jason.mas2j.parser" 
+            use="true" 
+            version="true" 
+            author="true" 
+            windowtitle="Jason - AgentSpeak Java Interpreter"
+            >
+                <classpath refid="project.classpath" />
+        </javadoc>
+    </target>
+    
+    <target name="apidocuml" unless="dot-nok" >
+        <javadoc 
+            destdir="${basedir}/doc/api" 
+            packagenames="jason.*" 
+            sourcepath="${basedir}/src" 
+            excludepackagenames="jason.asSyntax.parser,jason.mas2j.parser" 
+            use="true" 
+            version="true" 
+            author="true" 
+            windowtitle="Jason - AgentSpeak Java Interpreter"
+            >
+                <classpath refid="project.classpath" />
+                <doclet name="org.umlgraph.doclet.UmlGraphDoc" path="lib/UmlGraph.jar">
+                                    <!--param name="-inferrel"/ -->
+                                    <!--param name="-inferdep"/-->
+                                    <!--param name="-hide" value="java.*"/-->
+                                    <param name="-enumconstants" />
+                                    <!--param name="-collpackages" value="java.util.*"/-->
+                                    <param name="-qualify"/>
+                                    <!--param name="-collapsible"/-->
+                                    <param name="-postfixpackage"/>
+                                    <!--param name="-nodefontsize" value="14"/-->
+                                    <!--param name="-nodefontpackagesize" value="8"/-->
+                                    <!--param name="-edgefontsize" value="10"/-->
+                                    <!--param name="-link" value="http://java.sun.com/j2se/1.5.0/docs/guide/javadoc/doclet/spec"/>
+                                    <param name="-link" value="http://java.sun.com/j2se/1.5/docs/api"/-->
+                </doclet>           
+        </javadoc>
+    </target>
+
+    <!-- generate only the UML diagrams in PDF format -->
+    <target name="uml" unless="dot-nok" >
+            <property name="uml.dir" value="${basedir}/doc/uml"/>
+            <property name="src.uml.dir" value="${src.dir}/doc/uml"/>
+            <mkdir dir="${uml.dir}"/>
+            <javadoc sourcepath="src" packagenames="jason.asSyntax" package="true" >
+               <doclet name="org.umlgraph.doclet.UmlGraph" path="${basedir}/lib/UMLGraph.jar">
+                   <param name="-hide" value="java.*"/>
+                   <param name="-enumconstants" />
+                   <param name="-d" value="${uml.dir}"/>
+               </doclet>
+            </javadoc>
+            <move file="${uml.dir}/graph.dot" tofile="${uml.dir}/syntax.dot" />
+            <apply executable="dot" dest="${uml.dir}" parallel="false">
+                <arg value="-Tpdf"/>
+                <arg value="-o"/>
+                <targetfile/>
+                <srcfile/>
+                <fileset dir="${uml.dir}" includes="*.dot"/>
+                <mapper type="glob" from="*.dot" to="*.pdf"/>
+            </apply>
+    </target>
+    
+
+    <!-- distribution related tasks -->
+    
+    <target name="dist" depends="cleanExamples,plugin" description="Build distribution.">
+
+        <echo message="Generating Jason ${version}.${release}" />
+
+        <fixcrlf eol="crlf" includes="**/*.txt,**/*.bat,**/*.mas2j,**/*.asl" excludes="applications/**" srcdir="${basedir}" />
+
+        <fixcrlf tab="remove" tablength="4" javafiles="true" includes="**/*.java,**/*.xml,**/*.mas2j,**/*.asl" excludes="applications/**" srcdir="${basedir}" />
+
+        <delete failonerror="no" includeEmptyDirs="true">
+            <fileset dir="${distDir}" />
+        </delete>
+        <delete dir="${distDir}/.." />
+
+        <mkdir dir="${distDir}" />
+
+        <copy todir="${distDir}">
+            <fileset dir="${basedir}" includes="*.*" />
+            <fileset dir="${basedir}" includes="LICENSE" />
+            <fileset dir="${basedir}" includes="README" />
+
+            <fileset dir="${basedir}" includes="bin/*" excludes="bin/jedit.tgz" />
+            <fileset dir="${basedir}" includes="bin/jedit/**/*" />
+            <fileset dir="${basedir}" includes="doc/**/*" />
+            <fileset dir="${basedir}" includes="examples/**/*" />
+            <fileset dir="${basedir}" includes="demos/**/*" />
+            <fileset dir="${basedir}" includes="lib/**/*" />
+            <fileset dir="${basedir}" includes="src/**/*" />
+        </copy>
+
+        <!--delete failonerror="no" includeEmptyDirs="true">
+            <fileset dir="${distDir}" includes=".settings" />
+            <fileset dir="${distDir}" includes=".project" />
+            <fileset dir="${distDir}" includes=".classpath" />
+        </delete -->
+        <delete dir="${distDir}/bin/classes" />
+        <delete dir="${distDir}/bin/classes-eclipse" />
+        <delete dir="${distDir}/doc/faq" />
+        <delete dir="${distDir}/doc/api-doxygen" />
+        <delete dir="${distDir}/doc/mini-tutorial/src" />
+
+        <tar compression="gzip" tarfile="${distFile}.tgz" longfile="gnu">
+            <tarfileset dir="${distDir}/.." mode="755">
+                <include name="Jason-${version}.${release}/**/*.sh" />
+                <include name="Jason-${version}.${release}/**/asl2*" />
+            </tarfileset>
+            <tarfileset dir="${distDir}/..">
+                <include name="Jason-${version}.${release}/**/*" />
+                <exclude name="Jason-${version}.${release}/**/*.sh" />
+                <exclude name="Jason-${version}.${release}/**/asl2*" />
+            </tarfileset>
+        </tar>
+    </target>
+
+	<target name="maven-init" depends="jar" description="prepare maven files">
+	        <mkdir dir="${distDir}" />
+	        <copy file="${jasonJar}" tofile="${maven-jar}" />
+	        <jar jarfile="${maven-javadoc-jar}">
+	            <fileset dir="doc/api" />
+	        </jar>
+	        <jar jarfile="${maven-sources-jar}">
+	            <fileset dir="src" />
+	        </jar>
+	</target>
+
+    <!--target name="maven-deploy" depends="maven-init" description="generate the maven distribution">
+        <artifact:mvn>
+                <arg value="org.apache.maven.plugins:maven-deploy-plugin:2.6:deploy-file" />
+                <arg value="-Durl=${maven-snapshots-repository-url}" />
+                <arg value="-DrepositoryId=${maven-snapshots-repository-id}" />
+                <arg value="-DpomFile=pom.xml" />
+                <arg value="-Dfile=${maven-jar}" />
+        </artifact:mvn>       
+    </target-->
+	
+    <target name="maven-stage" depends="maven-init" description="generate the maven distribution">
+   	    <!-- sign and deploy the main artifact -->
+        <artifact:mvn>
+            <arg value="org.apache.maven.plugins:maven-gpg-plugin:1.3:sign-and-deploy-file" />
+            <arg value="-Durl=${maven-staging-repository-url}" />
+            <arg value="-DrepositoryId=${maven-staging-repository-id}" />
+            <arg value="-DpomFile=pom.xml" />
+            <arg value="-Dfile=${maven-jar}" />
+            <arg value="-Pgpg" />
+        </artifact:mvn>
+    	
+   	    <!-- sign and deploy the sources artifact -->
+   	    <artifact:mvn>
+   	            <arg value="org.apache.maven.plugins:maven-gpg-plugin:1.3:sign-and-deploy-file" />
+   	            <arg value="-Durl=${maven-staging-repository-url}" />
+   	            <arg value="-DrepositoryId=${maven-staging-repository-id}" />
+   	            <arg value="-DpomFile=pom.xml" />
+   	            <arg value="-Dfile=${maven-sources-jar}" />
+   	            <arg value="-Dclassifier=sources" />
+   	            <arg value="-Pgpg" />
+        </artifact:mvn>
+
+   	    <!-- sign and deploy the javadoc artifact -->
+   	    <artifact:mvn>
+   	            <arg value="org.apache.maven.plugins:maven-gpg-plugin:1.3:sign-and-deploy-file" />
+   	            <arg value="-Durl=${maven-staging-repository-url}" />
+   	            <arg value="-DrepositoryId=${maven-staging-repository-id}" />
+   	            <arg value="-DpomFile=pom.xml" />
+   	            <arg value="-Dfile=${maven-javadoc-jar}" />
+   	            <arg value="-Dclassifier=javadoc" />
+   	            <arg value="-Pgpg" />
+   	    </artifact:mvn>
+        <echo message="close and release the stage as documented at https://docs.sonatype.org/display/Repository/Sonatype+OSS+Maven+Repository+Usage+Guide#SonatypeOSSMavenRepositoryUsageGuide-8a.ReleaseIt"/>    	
+    </target>
+
+    <target name="all" depends="parsers,compile,apidoc" description="Build everything.">
+        <echo message="Application built." />
+    </target>
+
+    <target name="cleanExamples">
+        <delete failonerror="no" includeEmptyDirs="true" verbose="true">
+            <fileset dir="${basedir}/examples" includes="**/bin/**" excludes="**/game-of-life/bin/c-build.xml"/>
+            <fileset dir="${basedir}/demos"    includes="**/bin/**" />
+            
+            <fileset dir="${basedir}/examples" includes="**/work" />
+
+            <fileset dir="${basedir}/examples" includes="**/.stop___MAS" />
+            <fileset dir="${basedir}/demos"    includes="**/.stop___MAS" />
+            
+            <fileset dir="${basedir}/examples" includes="**/*-jws/**" />
+
+            <fileset dir="${basedir}/examples" includes="**/APDescription.txt" />
+            <fileset dir="${basedir}/demos"    includes="**/APDescription.txt" />
+                        
+            <fileset dir="${basedir}/examples" includes="**/MTPs-Main-Container.txt" />
+            <fileset dir="${basedir}/demos"    includes="**/MTPs-Main-Container.txt" />
+                        
+            <fileset dir="${basedir}/examples/sniffer" includes="log.*" />
+            <fileset dir="${basedir}/demos/persistent-belief-base" includes="a.bb" />
+
+            <fileset defaultexcludes="no" dir="${basedir}" includes="**/*~" />
+        </delete>
+    </target>
+
+    <target name="clean">
+        <delete failonerror="no" includeEmptyDirs="true" verbose="true">
+            <fileset defaultexcludes="no" dir="${basedir}" includes="**/*~" />
+            <fileset dir="${basedir}" includes="**/*.class" excludes="applications/**/*"/>
+            <fileset dir="${basedir}" includes="**/core" />
+            <!-- fileset dir="${basedir}/doc/api" includes="**/*" /-->
+            <fileset dir="${basedir}" includes="**/.nbattrs" />
+            <fileset dir="${basedir}" includes="**/*.backup" />
+            <fileset dir="${basedir}" includes="bin/*.old" />
+            <fileset dir="${basedir}" includes="**/.err" />
+            <fileset dir="${basedir}" includes="bookstore.*" />
+        </delete>
+        <delete dir="${build.dir}" />
+    </target>
+
+</project>

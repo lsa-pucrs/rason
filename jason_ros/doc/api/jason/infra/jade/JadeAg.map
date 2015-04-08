@@ -1,0 +1,12 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./JadeExecutionControl.html" title="jason.infra.jade.JadeExecutionControl" alt="" coords="15,214,158,239"/>
+<area shape="rect" id="node1" href="./JadeExecutionControl.html" title="&lt;TABLE&gt;" alt="" coords="5,203,169,251"/>
+<area shape="rect" id="node2_1" href="./JadeEnvironment.html" title="jason.infra.jade.JadeEnvironment" alt="" coords="204,214,321,239"/>
+<area shape="rect" id="node2" href="./JadeEnvironment.html" title="&lt;TABLE&gt;" alt="" coords="193,203,332,251"/>
+<area shape="rect" id="node3_2" href="./JadeAgArch.html" title="jason.infra.jade.JadeAgArch" alt="" coords="367,214,457,239"/>
+<area shape="rect" id="node3" href="./JadeAgArch.html" title="&lt;TABLE&gt;" alt="" coords="357,203,467,251"/>
+<area shape="rect" id="node4_3" href="./JadeAg.html" title="jason.infra.jade.JadeAg" alt="" coords="230,118,295,143"/>
+<area shape="rect" id="node4" href="./JadeAg.html" title="&lt;TABLE&gt;" alt="" coords="219,107,306,155"/>
+<area shape="rect" id="node8_4" href="http://java.sun.com/j2se/1.4.2/docs/api/jade/core/Agent.html" title="jade.core.Agent" alt="" coords="227,11,299,53"/>
+<area shape="rect" id="node8" href="http://java.sun.com/j2se/1.4.2/docs/api/jade/core/Agent.html" title="&lt;TABLE&gt;" alt="" coords="216,6,309,58"/>
+</map>

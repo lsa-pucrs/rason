@@ -1,0 +1,12 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./Term.html" title="jason.asSyntax.Term" alt="" coords="16,222,99,263"/>
+<area shape="rect" id="node1" href="./Term.html" title="&lt;TABLE&gt;" alt="" coords="5,217,109,269"/>
+<area shape="rect" id="node2_1" href="./Structure.html" title="jason.asSyntax.Structure" alt="" coords="48,17,117,42"/>
+<area shape="rect" id="node2" href="./Structure.html" title="&lt;TABLE&gt;" alt="" coords="37,5,128,53"/>
+<area shape="rect" id="node5_2" href="./BinaryStructure.html" title="jason.asSyntax.BinaryStructure" alt="" coords="110,115,221,141"/>
+<area shape="rect" id="node5" href="./BinaryStructure.html" title="&lt;TABLE&gt;" alt="" coords="99,104,231,152"/>
+<area shape="rect" id="node3_3" href="./RelExpr.html" title="jason.asSyntax.RelExpr" alt="" coords="144,230,211,255"/>
+<area shape="rect" id="node3" href="./RelExpr.html" title="&lt;TABLE&gt;" alt="" coords="133,219,221,267"/>
+<area shape="rect" id="node4_4" href="./LogExpr.html" title="jason.asSyntax.LogExpr" alt="" coords="256,230,325,255"/>
+<area shape="rect" id="node4" href="./LogExpr.html" title="&lt;TABLE&gt;" alt="" coords="245,219,336,267"/>
+</map>

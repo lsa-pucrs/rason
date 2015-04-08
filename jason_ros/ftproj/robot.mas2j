@@ -1,0 +1,12 @@
+MAS robot {
+
+    infrastructure: Centralised
+    //infrastructure: Jade(main_container_host("192.168.1.2"))
+	
+	agents:
+	
+		z agentArchClass org.ros.jason.RosAgArch;
+
+	    //turtle1 agentArchClass org.ros.jason.RosAgArch at "c1";      // robo com falha - daneel01
+		//turtle2 agentArchClass org.ros.jason.RosAgArch at "c2";      // robo inspetor  - giskard02
+}
