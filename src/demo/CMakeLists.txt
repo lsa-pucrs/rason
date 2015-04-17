@@ -95,6 +95,10 @@ add_executable(motion_decomp src/motion_decomposer/motion_decomposer.cpp src/mot
 add_dependencies(motion_decomp jason_msgs_generate_messages_cpp)
 target_link_libraries(motion_decomp ${catkin_LIBRARIES})
 
+add_executable(warning_synth src/warning_synth/warning_synth.cpp)
+add_dependencies(warning_synth jason_msgs_generate_messages_cpp)
+target_link_libraries(warning_synth ${catkin_LIBRARIES})
+
 #############
 ## Install ##
 #############
