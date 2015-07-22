@@ -3,6 +3,7 @@
   <include file="$(find turtlebot_gazebo)/launch/amcl_demo.launch" />
   <include file="$(find turtlebot_rviz_launchers)/launch/view_navigation.launch" />
   <node name="motion_decomp" pkg="demo" type="motion_decomp" />
+  <node name="warning_synth" pkg="demo" type="warning_synth" />
   <include file ="$(find jason)/launch/jason.launch" />
 </launch>
 
